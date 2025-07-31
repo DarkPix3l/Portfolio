@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebDev Portfolio | Greta Macri</title>
+    <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- TODO -->
+    <meta name="description" content="">
+    <meta name="keywords" content="keyword 1, keyword 2, etc">
+    <link rel="canonical" href="https://gretamacri.com">
+
+    <meta name="og:title" content="WebDev Portfolio | Greta Macri">
+    <meta name="og:type" content="portfolio">
+    <meta name="og:image" content="URL of image here">
+    <meta name="og:description"
+        content="I’m studing Web-Development with focus on Front-End. Take a look at my projects to know what i’m working on">
+</head>
+
+<body>
+    <!-- ______Menu Content______ -->
+    <div id="nav-link" class="wrapper">
+        <a class="logo" href="#hero" aria-label="logo link for the first section"><img
+                src="./assets/icons/LogoPlaceholder.svg" alt="logo"></a>
+        <ul>
+            <li class="menulinks"><a href="#skills">Skills</a></li>
+            <li class="menulinks"><a href="#projects">Projects</a></li>
+            <li class="menulinks"><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- ______Navigation______ -->
+    <nav id="navigation">
+        <div id="burgerM">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <!--         <div id="arrows">
+            <a href=""><img id="arrow-up" src="./assets/icons/arrow-square-up.svg" alt="previous section"></a>
+            <a href=""><img id="arrow-down" src="./assets/icons/arrow-square-down.svg" alt="next section"></a>
+        </div> -->
+    </nav>
+
+    <!-- ______HERO SECTION______ -->
+    <section id="hero">
+
+        <!-- ______Dark-light-mode______ -->
+        <div class="dark-light-mode">
+            <img src="./assets/icons/moon.svg" class="special" alt="moon icon">
+            <div class="switch special">
+                <div class="button"></div>
+            </div>
+            <img src="./assets/icons/sun.svg" class="special" alt="sun icon">
+        </div>
+
+        <div id="hero-background" class="special"></div>
+        <div class="wrapper hero-wrapper">
+            <div class="Tcontainer">
+                <h1 id="bigTitle">Hi there, I'm XXX</h1>
+                <p>I’m studing Web-Development with focus on Front-End.
+                    Take a look at my projects to know what i’m working on</p>
+            </div>
+
+            <!-- ______projects-shortcut______ -->
+            <a id="projects-shortcut" href="#projects">
+                <div class="square special"></div>
+                <nav class="downArrow">
+                    <div class="lineDownArrow special"></div>
+                    <img src="./assets/icons/arrowDown.svg" class="special" alt="downArrow">
+                </nav>
+            </a>
+        </div>
+        <div id="social">
+            <div id="hero-line" class="special"></div>
+            <a href="" target="_blank"><img class="special" src="./assets/icons/social/git.svg" alt=""></a>
+            <a href="" target="_blank"><img class="special" src="./assets/icons/social/linkedin.svg" alt=""></a>
+            <a href="" target="_blank"><img class="special" src="./assets/icons/social/dribble.svg" alt=""></a>
+        </div>
+    </section>
+
+    <div id="sections-container">
+
+        <!-- ______SKILLS SECTION______ -->
+        <section id="skills">
+            <div class="wrapper skills-wrapper">
+                <div id="skills-text">
+                    <h2>My Skills</h2>
+                    <p>Trough my studies I’ve gained a solid understanding of web development concepts, CLI commands,
+                        this,
+                        and that. I’ve dedicated a lot of my free time to improve, apply these concepts to real world
+                        scenarios and application.
+                    </p>
+                </div>
+                <div id="skills-list" class="special">
+                    <ul class="special">
+                        <li>HTML & CSS</li>
+                        <li>SASS</li>
+                        <li>BOOTSTRAP</li>
+                        <li>tailwind</li>
+                        <li>Javascript ES6</li>
+                        <li>REACT</li>
+                        <li>GIT</li>
+                        <li>SQL</li>
+                        <li>CMS</li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </section>
+        <section>
+            <h2>What I’ve been working on</h2>
+        </section>
+        <!-- ______PROJECTS SECTION______ -->
+        <section id="projects">
+
+            <div id="container">
+
+                <div class="project" data-page="Project_page1.html">
+                    <!-- <img class="progectImage"
+                        src="https://images.unsplash.com/photo-1735790994003-26ca41b3ccb2?q=80&w=2630&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt=""> -->
+                    <div class="description">
+                        <h3>BLABLA</h3>
+                        <p>Click to know more</p>
+                    </div>
+                </div>
+
+                <div class="project" data-page="Project_page2.html">
+                    <div class="description">
+                        <h3>BLABLA</h3>
+                        <p>Click to know more</p>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <div class="description">
+                        <h3>BLABLA</h3>
+                        <p>Click to know more</p>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <div class="description">
+                        <h3>BLABLA</h3>
+                        <p>Click to know more</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- ______CONTACT SECTION______ -->
+        <section id="contact">
+            <div class="wrapper contact-wrapper">
+                <div id="contact-text">
+                    <h2>Let’s build something <br>together!</h2>
+                    <p>Feel free to reach out if you’re looking for
+                        a developer, have a question, or just want to connect.
+                    </p>
+                    <!-- <p>Made with 🤍 by G/*</p> -->
+                </div>
+
+
+                <div class="half-div">
+                    <form id="email-form" name="email-form" data-name="Email Form" action="#" method="post">
+                        <label for="name">Name</label>
+                        <input type="text" class="text-field w-input" maxlength="256" name="name"
+                            placeholder="Enter your name" id="name" required>
+
+                        <label for="subject">Subject</label>
+                        <input type="text" class="text-field w-input" maxlength="256" name="subject"
+                            placeholder="Enter a subject" id="subject">
+
+                        <label for="email">Email Address</label>
+                        <input type="email" class="text-field w-input" maxlength="256" name="email"
+                            placeholder="Enter your email" id="email" required>
+
+                        <label for="message">Message</label>
+                        <textarea class="text-field" name="message" maxlength="5000"
+                            placeholder="How can I help you today?" id="message" required></textarea>
+
+                        <input type="submit" value="Submit" class="outlined-btn">
+                    </form>
+
+                    <!-- <div class="success-message w-form-done">
+                        <div>Thank you! Your submission has been received!</div>
+                      </div>
+                      
+                      <div class="error-message w-form-fail">
+                        <div>Oops! Something went wrong while submitting the form.</div>
+                      </div> -->
+                </div>
+
+            </div>
+        </section>
+        <footer>
+            <div>
+                <img src="./assets/icons/LogoPlaceholder.svg" alt="logo image">
+                <ul>
+                    <li><a href="">Github</a></li>
+                    <li><a href="">Behance</a></li>
+                    <li><a href="">Dribble</a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+    <script src="./js/general.js"></script>
+</body>
+
+</html>

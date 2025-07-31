@@ -1,0 +1,13 @@
+
+#folders
+figma_exp/
+
+# System files
+.DS_Store
+.vscode/
+
+# Misc
+*.txt
+*.pdf
+*.md
+!README.md
