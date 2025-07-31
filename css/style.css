@@ -1,7 +1,4 @@
 /* wraper flex style */
-/*------ Text AND bg colors------- */
-/*------ Transitions Defauts------- */
-/*------ wrapper Defauts------- */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -24,10 +21,6 @@ body {
   color: white;
   width: 100%;
   overflow-x: hidden;
-}
-
-p {
-  word-spacing: 1.8;
 }
 
 a {
@@ -53,6 +46,10 @@ h2 {
   line-height: 68px;
   font-weight: 600;
   margin-bottom: 26px;
+}
+
+p {
+  word-spacing: 1.8;
 }
 
 /* helpers */

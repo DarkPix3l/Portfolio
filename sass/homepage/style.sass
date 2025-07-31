@@ -1,5 +1,5 @@
-@import 'mixins'
-@import 'variables'
+@use '../shared/variables' as *
+@use '../shared/_mixins' as *
 
 *, *::before, *::after
     box-sizing: border-box
@@ -23,9 +23,6 @@ body
     width: 100%
     overflow-x: hidden
 
-p
-    word-spacing: 1.8
-
 a
     text-decoration: none
     color: $light-text
@@ -47,6 +44,8 @@ h2
     font-weight: 600
     margin-bottom: 26px
 
+p
+    word-spacing: 1.8
 /* helpers */
 
 .wrapper

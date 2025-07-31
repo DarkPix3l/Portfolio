@@ -1,0 +1,28 @@
+@use '../shared/variables' as *
+*, *::before, *::after
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+
+
+::-webkit-scrollbar
+    display: none
+
+html
+    scroll-behavior: smooth
+    font-family: "Roboto", sans-serif
+    font-size: 16px
+    
+body
+    background-color: $dark-bg
+    color: $light-text
+    width: 100%
+    overflow-x: hidden
+
+a
+    text-decoration: none
+    color: $light-text
+
+ul
+    list-style: none
+    display: flex
