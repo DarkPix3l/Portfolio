@@ -1,0 +1,76 @@
+@use '../../shared/_variables' as *
+
+#burgerM
+    width: 43px
+    height: 45px
+    position: fixed
+    cursor: pointer
+    z-index: 10
+    right: 20px
+    top: 20px
+    span
+        display: block
+        position: absolute
+        height: 5px;
+        width: 100%;
+        background: #ffffff
+        border-radius: 9px
+        opacity: 1
+        transform: rotate(0deg)
+        transition: 0.25s ease-in-out
+        transform-origin: left center
+
+        &:nth-child(1)
+            top: 0
+          
+        &:nth-child(2)
+            top: 15px
+
+        &:nth-child(3)
+            top: 30px
+
+    &.open
+        span
+            &:nth-child(1)
+                transform: rotate(45deg)
+
+            &:nth-child(2)
+                width: 0
+                opacity: 0
+            
+            &:nth-child(3)
+                transform: rotate(-45deg)
+
+#nav-link
+    display: flex
+    width: 100%
+    background-color: rgba(0, 0, 0, 0.568)
+    position: fixed
+    justify-content: space-between
+    z-index: 3
+    border-bottom: 1px solid white
+    opacity: 0
+    padding: 0px 0vw
+    visibility: hidden
+    .logo
+        transform: scale(0)
+        transition: $global-trans
+
+    ul
+        display: flex
+        align-items: center
+        gap: 20px
+        font-size: 1.2rem
+
+        a
+            padding: 25px
+
+        li:nth-child(3) > a:nth-child(1)
+            padding-right: 0
+            
+    &.isClicked
+        opacity: 1
+        padding: 26px 10vw
+        visibility: visible
+        .logo
+            transform: scale(1)
