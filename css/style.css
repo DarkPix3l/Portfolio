@@ -1,4 +1,17 @@
-/* wraper flex style */
+/* helpers */
+.wrapper {
+  padding: 0 10vw;
+}
+
+.light-mode {
+  background-color: #EFEFEF;
+  color: #000;
+}
+
+.special {
+  filter: invert(0);
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -32,6 +45,10 @@ ul {
   display: flex;
 }
 
+section:not(#hero, #projects, #temp) {
+  padding: 16.5vh 0;
+}
+
 #bigTitle {
   font-size: 6vw;
   /* text-transform: uppercase */
@@ -50,20 +67,6 @@ h2 {
 
 p {
   word-spacing: 1.8;
-}
-
-/* helpers */
-.wrapper {
-  padding: 0 10vw;
-}
-
-.light-mode {
-  background-color: #EFEFEF;
-  color: #000;
-}
-
-.special {
-  filter: invert(0);
 }
 
 #burgerM {
@@ -190,6 +193,7 @@ p {
   transform: translateX(50px);
 }
 
+/* wraper flex style */
 /*------ HERO SECTION ------- */
 #hero {
   height: 100vh;

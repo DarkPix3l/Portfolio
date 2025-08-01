@@ -31,6 +31,10 @@ ul {
   display: flex;
 }
 
+section:not(#hero, #projects, #temp) {
+  padding: 16.5vh 0;
+}
+
 #bigTitle {
   font-size: 6vw;
   /* text-transform: uppercase */
@@ -570,20 +574,4 @@ p {
 
 .img-container:nth-of-type(4) {
   background-image: url(../assets/img/projects/square/station_sqaure_L.jpg);
-}
-
-/*------ FOOTER ------- */
-footer {
-  width: 100%;
-  padding: 20px 10vw;
-  box-shadow: 0rem 1rem 5rem #EFEFEF;
-}
-footer div {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-}
-footer div ul {
-  gap: 104px;
 }/*# sourceMappingURL=project.css.map */
