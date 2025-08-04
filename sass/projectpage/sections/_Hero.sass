@@ -1,111 +1,23 @@
-/*------ HERO SECTION ------- */
+/*------ HERO SECTION Projects------- */
 @use '../../shared/_variables' as *
 @use '../../shared/_mixins' as *
-
-.burger
-    cursor: pointer
-    top: 20px
-    position: relative
-    display: inline-block
-    width: 46px
-    height: 40px
-    margin: 20px
-    
-    .line
-        display: block
-        position: absolute
-        width: 100%
-        height: 4px
-        background-color: #fff
-        border-radius: 55px
-        transition: background-color 0.3s 0s ease, margin-top 0.3s  0s ease, transform 0.3s 0.3s ease
-        transform-origin: center
-    .line1
-        margin-top: -10px
-    .line3
-        margin-top: 10px
-
-.burger:hover 
-    .line1
-        margin-top: 0
-        transform: rotate(45deg)
-    .line2
-        background-color: transparent
-    .line3
-        margin-top: 0
-        transform: rotate(-45deg)
-
-.burger:not(:hover) 
-    .line1
-        transition: transform 0.3s ease, margin-top 0.3s 0.3s ease
-        margin-top: -10px
-        transform: rotate(0deg)
-
-    .line2
-        background-color: #fff
-        transition: background-color 0.3s 0.3s
-
-    .line3
-        transition: transform 0.3s ease, margin-top 0.3s 0.3s ease
-        margin-top: 10px
-        transform: rotate(0deg)
-        
-#nav-link
-    display: flex
-    align-items: center
-    width: 100%
-    background-color: rgba(0, 0, 0, 0.568)
-    position: fixed
-    justify-content: space-between
-    z-index: 3
-    border-bottom: 1px solid white
-    
-    ul
-        display: flex
-        align-items: center
-        gap: 20px
-        font-size: 1.2rem
-
-        a
-            padding: 25px
-        
-        li:nth-child(3) > a:nth-child(1)
-            padding-right: 0
-
-
-//---Menu animation    
-.logo
-    transform: scale(1)
-    transition: $global-trans
-    
-.isNOTclicked  .logo
-    transform: scale(0)
-    
-
-.isNOTclicked li a
-    display: none  //no fade temporary solution
-
-
-.isNOTclicked
-    opacity: 0
-    padding: 0px 0vw
-    visibility: hidden
-    
-.isclicked    
-    opacity: 1
-    padding: 26px 10vw
-    visibility: visible
-//------------------  
+@use '../../shared/_breakpoints' as *
     
 #hero
-    height: 100vh
+    height: 100svh
     width: 100%
     opacity: 1
     transform: scale(1)
     position: fixed
     background-position: 72% 52%
     background-repeat: no-repeat
-    background-size: cover 
+    background-size: cover
+    @include xl
+        height: 100vh
+
+    #bigTitle
+        text-transform: uppercase
+
     .hero-wrapper
         height: 100%
         @include wrapper-style(column, center)
@@ -113,9 +25,9 @@
 .hero1
     background-image: url("https://images.unsplash.com/photo-1735790994003-26ca41b3ccb2?q=80&w=2630&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
 
-.hero2
+/* .hero2
     background-image: url("https://images.unsplash.com/photo-1736687107097-0022360964fb?q=80&w=2630&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
-
+ */
 #navigation
     display: flex
     flex-direction: column
@@ -129,43 +41,5 @@
     #arrows
         display: flex
         flex-direction: column
-
-//------ Switch Button
-
-.dark-light-mode
-    width: 100%
-    height: fit-content
-    position: absolute
-    display: flex
-    flex-direction: row
-    align-items: center
-    justify-content: center
-    flex-shrink: 0
-    gap: 21px
-    padding: 15px
-
-    .switch
-        width: 80px
-        height: fit-content
-        display: flex
-        flex-shrink: 0
-        border-radius: 10px
-        padding: 2px
-        border: 1px solid white
-        background-color: rgb(87, 79, 79)
-        box-shadow: inset 0 0 22.0625px 0.125px rgba(0, 0, 0, 0.8), inset 0 0.0625px 5.125px rgba(0, 0, 0, 0.4)
-        cursor: pointer
-    .button
-        width: 50%
-        height: 35px
-        position: relative
-        border-radius: 10px
-        box-shadow: inset 0 0 5.0625px 1.125px rgb(0, 0, 0), inset -6px -4.5px 3.0625px 3.125px rgba(255, 255, 255, 0.8)
-        border: 0.5px solid white
-        background-color: rgb(212, 212, 212)
-        transform: translateX(0px)
-        transition: left 0.5 ease
-        &:hover
-            background-color: grey
 
 
