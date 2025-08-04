@@ -40,7 +40,7 @@ window.addEventListener("scroll", () => {
   const windowHeight = window.innerHeight;
 
   // Calculate opacity based on scroll progress (0 to 1)
-  const opacity = 1 - (scrollPosition) / windowHeight;
+  const opacity = 1 - scrollPosition / windowHeight;
   const scale = 1 - scrollPosition / windowHeight;
 
   // Set the opacity dynamically (clamp between 0 and 1)
@@ -69,6 +69,8 @@ const navSlide = () => {
 
         //This is too fast
         targetSection.scrollIntoView({ behavior: "smooth" });
+        burger.classList.toggle("open");
+        nav.classList.toggle("isClicked");
       });
     });
   });
