@@ -1,4 +1,5 @@
 @use '../../shared/_variables' as *
+@use '../../shared/_breakpoints' as *
 
 #burgerM
     width: 43px
@@ -43,34 +44,48 @@
 
 #nav-link
     display: flex
+    flex-direction: column
+    align-items: center
     width: 100%
-    background-color: rgba(0, 0, 0, 0.568)
+    background-color: rgba(0, 0, 0, 0.9)
     position: fixed
     justify-content: space-between
     z-index: 3
     border-bottom: 1px solid white
     opacity: 0
-    padding: 0px 0vw
+    padding: 0rem 10vw
     visibility: hidden
+    @include lg
+        flex-direction: row
+        
+
     .logo
-        transform: scale(0)
+        transform: scale(0.2)
+        transform-origin: center
         transition: $global-trans
+        width: 32px
 
     ul
         display: flex
+        flex-direction: column
         align-items: center
-        gap: 20px
+        gap: 2rem
         font-size: 1.2rem
+        margin: 30px 0
+        @include lg
+            flex-direction: row
 
         a
-            padding: 25px
+            padding: 0
+            @include lg
+                padding: 25px
 
         li:nth-child(3) > a:nth-child(1)
             padding-right: 0
             
     &.isClicked
         opacity: 1
-        padding: 26px 10vw
+        padding: 3rem 10vw
         visibility: visible
         .logo
-            transform: scale(1)
+            transform: scale(0.4)

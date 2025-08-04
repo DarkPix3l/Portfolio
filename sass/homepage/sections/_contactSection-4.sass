@@ -1,22 +1,30 @@
 @use '../../shared/_mixins' as *
 @use '../../shared/_helpers' as *
+@use '../../shared/_breakpoints' as *
     
 /*------ CONTACT SECTION ------- */
 
 .contact-wrapper
-    @include wrapper-style(row, flex-start, space-between)
     gap: 50px
+    flex-direction: column
+    @include xl
+        @include wrapper-style(row, flex-start, space-between)
 
 #contact-text
-    max-width: 500px
+    max-width: none
     display: flex
     flex-direction: column
     align-items: flex-start
     p:nth-child(3)
         margin-top: 20px
+    @include xl
+        max-width: 500px
 
 .half-div
-    width: 50%
+    width: 100%
+    margin-top: 3rem
+    @include xl
+        width: 50%
 
 textarea 
     resize: vertical

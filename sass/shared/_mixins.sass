@@ -1,13 +1,7 @@
 @use '../shared/variables' as *
 
-/* wraper flex style */
 @mixin wrapper-style($direction: row, $alignIT: center, $justC: center)
     display: flex
     flex-direction: $direction
     align-items: $alignIT
     justify-content: $justC
-
-@mixin footerStyle()
-    width: 100%
-    padding: 20px $px
-    box-shadow: 0rem 1rem 5rem $light-bg

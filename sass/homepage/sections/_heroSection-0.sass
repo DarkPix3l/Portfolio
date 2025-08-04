@@ -1,18 +1,21 @@
 @use '../../shared/_variables' as *
 @use '../../shared/_mixins' as *
+@use '../../shared/_breakpoints' as *
 
 /*------ HERO SECTION ------- */
 
 #hero
-    height: 100vh
+    height: 100svh
     width: 100%
     opacity: 1
     transform: scale(1)
     z-index: 1
     position: fixed
+    @include xl
+        height: 100vh
 
     #hero-background
-        height: 100vh
+        height: 100svh
         width: 50%
         background-image: url("https://images.unsplash.com/photo-1734631182506-a7d433ba66d6?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
         background-repeat: no-repeat
@@ -21,18 +24,20 @@
         opacity: 0.5
         right: 0
         z-index: -1
+        @include lg
+            height: 100vh
     p
-        font-size: 1.1vw
-        font-weight: 300
-        line-height: 35px
+        font-weight: 400
+        line-height: 30px
         text-align: center
+        padding: 20px
 
     .hero-wrapper
         height: 100%
         @include wrapper-style(column, center)
 
     #social
-        display: flex
+        display: none
         flex-wrap: nowrap
         width: 50%
         align-items: center
@@ -42,10 +47,16 @@
         right: 0
         gap: 40px
 
+        a > img
+            width: 32px
+
         #hero-line
             width: 36%
             height: 2px
             background-color: white
+        @include lg
+            display: flex
+            
 
 .Tcontainer
     margin-top: 7%
@@ -58,16 +69,15 @@
     align-items: center
     display: flex
     flex-direction: column
-#projects-shortcut:hover
-    .lineDownArrow
-        transform: scaleY(1.4)
-
-    img
-        transform: translateY(20px)
-    .square
-        transform: translateY(20px) rotate(90deg)
-        border: none
-        background-color: white
+    &:hover
+        .lineDownArrow
+            transform: scaleY(1.4)
+        img
+            transform: translateY(20px)
+        .square
+            transform: translateY(20px) rotate(90deg)
+            border: none
+            background-color: white
 
 .square
     width: 31px
@@ -110,5 +120,6 @@
     z-index: 100
 
     #arrows
-        display: flex
-        flex-direction: column */
+        display: none
+        flex-direction: column 
+        */
