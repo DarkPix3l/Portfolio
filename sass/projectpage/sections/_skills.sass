@@ -1,5 +1,6 @@
 @use '../../shared/variables' as *
 @use '../../shared/_mixins' as *
+@use '../../shared/_breakpoints' as *
 
 /*------ SKILLS SECTION ------- */
 #sections-container
@@ -9,17 +10,18 @@
     background-color: inherit
 
 .skills-wrapper
-    padding-top: $py
-    padding-bottom: $py
     @include wrapper-style(column, flex-start)
 
 #skills-text
     display: flex
-    flex-direction: row
+    flex-direction: column
     justify-content: space-between
     align-items: flex-start
-    gap: 120px
+    gap: 46px
     margin-bottom: 68px
+    @include xl
+        flex-direction: row
+        gap: 120px
 
     p
         /* text-wrap: balance */

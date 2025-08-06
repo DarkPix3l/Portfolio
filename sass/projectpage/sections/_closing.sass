@@ -1,5 +1,7 @@
 @use '../../shared/variables' as *
 @use '../../shared/_mixins' as *
+@use '../../shared/_breakpoints' as*
+
 /*------ CLOSING SECTION ------- */
 
 #closing
@@ -9,7 +11,9 @@
 
 #closing-text
     text-align: center
-    margin-bottom: 350px
+    margin-bottom: 195px
+    @include xl
+        margin-bottom: 350px
 
 #closing-navigation
     display: flex
@@ -18,16 +22,22 @@
     justify-content: space-between
 
 .flex-left
-    display: flex
-    flex-direction: row
-    gap: 69px
+    flex-direction: column
+    align-items: flex-start
+    @include xl
+        flex-direction: row
 
 .flex-right
-    display: flex
-    flex-direction: row-reverse
-    gap: 69px
-
+    flex-direction: column
+    align-items: flex-end
+    @include xl
+        flex-direction: row-reverse
+    
 .link-arrow
+    display: flex
+    gap: 0px
+    @include xl
+        gap: 69px
     p
         text-wrap: nowrap
         align-self: center
@@ -85,10 +95,12 @@
 .frame
     position: absolute
     left: 50%
-    transform: translate(-50%,-23%)
     text-align: center
     z-index: 1
     cursor: pointer
+    transform: translate(-50%,-247%)
+    @include lg
+        transform: translate(-50%,-23%)
 
 .grid-container
     width: 64px

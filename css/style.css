@@ -44,7 +44,7 @@ ol, ul, li {
   list-style: none;
 }
 
-section:not(#hero, #projects, #temp) {
+section:not(#hero, #projects, #temp, #closing) {
   padding: 16.5vh 0;
 }
 
@@ -160,7 +160,7 @@ p {
 }
 #nav-link.isClicked {
   opacity: 1;
-  padding: 3rem 10vw;
+  padding: 1.5rem 10vw;
   visibility: visible;
 }
 #nav-link.isClicked .logo {
@@ -519,7 +519,7 @@ p {
   gap: 50px;
   flex-direction: column;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
   .contact-wrapper {
     display: flex;
     flex-direction: row;
@@ -545,9 +545,8 @@ p {
 
 .half-div {
   width: 100%;
-  margin-top: 3rem;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
   .half-div {
     width: 50%;
   }

@@ -1,3 +1,4 @@
+@use '../../shared/_breakpoints' as *
 /*------ PROJECTS SECTION ------- */
 #projects
     scroll-margin: 100px
@@ -8,7 +9,10 @@
     p
         line-height: 2
     figure
-        margin: 90px 0
+        margin: 50px 0
+        @include lg
+            margin: 90px 0
+
     & figure:last-child
         margin-bottom: 0 
 
