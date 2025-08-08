@@ -34,13 +34,3 @@ window.addEventListener("keydown", function (event) {
     closeModalFunc();
   }
 });
-
-const goToProject2 = () => {
-  document.querySelectorAll(".img-container").forEach((item) => {
-    item.addEventListener("click", () => {
-      const pageUrl = item.dataset.page;
-      window.location.href = pageUrl;
-    });
-  });
-};
-goToProject2();

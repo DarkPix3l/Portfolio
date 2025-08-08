@@ -77,14 +77,3 @@ const navSlide = () => {
 };
 
 navSlide();
-
-//GO TO PROJECT DESKTOP FUNCTION
-const goToProject = () => {
-  document.querySelectorAll(".project").forEach((item) => {
-    item.addEventListener("click", () => {
-      const pageUrl = item.dataset.page;
-      window.location.href = pageUrl;
-    });
-  });
-};
-goToProject();

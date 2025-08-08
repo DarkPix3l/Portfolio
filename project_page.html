@@ -40,7 +40,7 @@
     </nav>
 
     <!-- ______HERO SECTION______ -->
-    <section id="hero" class="hero1">
+    <section id="hero">
 
         <!-- ______Dark-light-mode______ -->
         <div class="dark-light-mode">
@@ -52,7 +52,7 @@
         </div>
 
         <div class="hero-wrapper">
-            <h1 id="bigTitle" class="special">Project Title</h1>
+            <h1 id="bigTitle" class="titleB special">Project Title</h1>
         </div>
     </section>
 
@@ -62,20 +62,17 @@
         <section id="skills">
             <div class="wrapper skills-wrapper">
                 <div id="skills-text">
-                    <h2>Project Title</h2>
-                    <p>Ut ac fringilla tellus. Proin quam metus, interdum ut posuere non, consequat eu ante. Etiam vel
-                        placerat ante. Donec mollis turpis sit amet ipsum commodo fermentum. Suspendisse feugiat augue
-                        ut massa gravida, pretium ultrices velit accumsan. Donec malesuada semper viverra.
-                    </p>
+                    <h2 class="titleB"></h2>
+                    <p id="summary">Fallback Text</p>
                 </div>
                 <div id="skills-list">
                     <ul>
                         <li><span class="P-icon special"><img src="./assets/icons/Project_skills/triangle.svg"
-                                    alt="project sill icon"></span>UI Design</li>
+                                    alt="project sill icon"></span><span>Fallback Text</span></li>
                         <li><span class="P-icon special"><img src="./assets/icons/Project_skills/monitor.svg"
-                                    alt="project sill icon"></span>Web Development</li>
+                                    alt="project sill icon"></span><span>Fallback Text</span></li>
                         <li><span class="P-icon special"><img src="./assets/icons/Project_skills/code.svg"
-                                    alt="project sill icon"></span>Javascript - HTML & CSS - REACT - BOOTSTRAP </li>
+                                    alt="project sill icon"></span><span>Fallback Text</span></li>
                     </ul>
                 </div>
             </div>
@@ -86,35 +83,7 @@
         <section id="projects">
 
             <div id="container" class="wrapper">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer et lacus ac leo ultrices posuere.
-                    Donec mattis tellus eu turpis porta rutrum. Nam lacus lorem, laoreet ut nibh non, vehicula egestas
-                    ante. Cras vulputate tristique quam, id fermentum dolor malesuada in. Praesent sed ullamcorper
-                    dolor. Nunc in accumsan nunc. Donec tempor dolor nec diam malesuada, sit amet feugiat lorem tempor.
-                    Vivamus a purus et magna semper fringilla commodo a urna. Donec sem ante, iaculis ut turpis
-                    eleifend, euismod molestie metus. Phasellus tincidunt dignissim lacus, porta sagittis mi fringilla
-                    sit amet. Nullam sit amet nisl sed est sagittis sagittis quis eu turpis. In porttitor mollis quam in
-                    interdum. In aliquam velit turpis, sed ultricies massa aliquet sed. Aliquam ac erat at nisl
-                    hendrerit lacinia vel id augue. Ut sed nisl at ipsum pharetra sollicitudin vel id elit.</p>
-
-                <figure class="project-image">
-                    <img src="./assets/img/imgPlaceholder_hor.svg" alt="">
-                    <figurecaption>Bla Bla Bla BlaBla Bla </figurecaption>
-                </figure>
-
-                <figure class="project-image">
-                    <img src="./assets/img/imgPlaceholder_hor.svg" alt="">
-                    <figurecaption>Bla Bla Bla BlaBla Bla </figurecaption>
-                </figure>
-
-                <figure class="project-image">
-                    <img src="./assets/img/imgPlaceholder_hor.svg" alt="">
-                    <figurecaption>Bla Bla Bla BlaBla Bla </figurecaption>
-                </figure>
-
-                <figure class="project-image">
-                    <img src="./assets/img/imgPlaceholder_hor.svg" alt="">
-                    <figurecaption>Bla Bla Bla BlaBla Bla </figurecaption>
-                </figure>
+                <p id="description">Fallback Text</p>
 
             </div>
         </section>
@@ -174,19 +143,19 @@
     <div class="modal">
         <img class="closeIcon" src="./assets/icons/close-icon.svg" alt="click/tap here to close the modal">
         <div class="grid">
-            <div class="img-container item-a" data-page="Project_page1.html">
+            <div class="img-container item-a" data-project-id="project1">
                 <p class="special">Project Title</p>
             </div>
 
-            <div class="img-container item-b" data-page="Project_page2.html">
+            <div class="img-container item-b" data-project-id="project2">
                 <p class="special">Project Title</p>
             </div>
 
-            <div class="img-container item-a">
+            <div class="img-container item-a" data-project-id="project3">
                 <p class="special">Project Title</p>
             </div>
 
-            <div class="img-container item-b">
+            <div class="img-container item-b" data-project-id="project4">
                 <p class="special">Project Title</p>
             </div>
         </div>
@@ -195,6 +164,8 @@
 
     <script src="./js/general.js"></script>
     <script src="./js/MainPage.js"></script>
+    <script src="./js/data.js"></script>
+    <script src="./js/ProjectLoader.js"></script>
 
 </body>
 
