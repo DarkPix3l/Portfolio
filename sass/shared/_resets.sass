@@ -4,7 +4,6 @@
     margin: 0
     padding: 0
 
-
 ::-webkit-scrollbar
     display: none
 
@@ -14,10 +13,17 @@ html
     font-size: 16px
     
 body
-    background-color: $dark-bg
-    color: $light-text
     width: 100%
     overflow-x: hidden
+    transition: background-color 0.8s ease, color 0.5s ease
+
+body[data-theme="light"]  
+    background-color: $light-bg
+    color: $dark-text
+
+body[data-theme="dark"]
+    background-color: $dark-bg
+    color: $light-text
 
 a
     text-decoration: none

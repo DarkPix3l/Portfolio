@@ -24,7 +24,7 @@
         display: flex
         flex-shrink: 0
         border-radius: 10px
-        padding: 2px
+        padding: 0.5px
         background-color: rgb(87, 79, 79)
         box-shadow: rgba(0, 0, 0, 0.8) 0px 0px 22.0625px 0.125px inset, rgba(0, 0, 0, 0.8) 0px 0.0625px 5.125px inset,rgb(255,255,255) 0px 0px 3px -1px
         cursor: pointer
@@ -36,16 +36,17 @@
         height: 27px
         position: relative
         border-radius: 10px
-        box-shadow: inset 0 0 5.0625px 1.125px rgb(0, 0, 0), inset -6px -4.5px 3.0625px 3.125px rgba(255, 255, 255, 0.8)
-        border: 0.5px solid white
+        box-shadow: inset 0 0 5.0625px 1.125px rgb(0, 0, 0), inset -6px -4.5px 3.0625px 3.125px rgba(255, 255, 255, 0.8), 0px 0px 15px black
+        border: 0.1px solid rgba(255, 255, 255, 0.2)
         background-color: rgb(212, 212, 212)
         transform: translateX(0px)
-        transition: left 0.5 ease
+        /*   transition: left 0.5 ease */
+
         @include lg
             height: 35px
 
         &:hover
             background-color: grey
             
-.active
-    transform: translateX(50px)
+/* .active
+    transform: translateX(50px) */

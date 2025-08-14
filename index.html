@@ -25,9 +25,9 @@
         content="I’m studing Web-Development with focus on Front-End. Take a look at my projects to know what i’m working on">
 </head>
 
-<body>
+<body data-theme="dark">
     <!-- ______Menu Content______ -->
-    <div id="nav-link" class="wrapper">
+    <div id="nav-link" class="wrapper special">
         <a class="logo" href="#hero" aria-label="logo link for the first section"><img
                 src="./assets/icons/LogoPlaceholder.svg" alt="logo"></a>
         <ul>
@@ -39,7 +39,7 @@
 
     <!-- ______Navigation______ -->
     <nav id="navigation">
-        <div id="burgerM">
+        <div id="burgerM" class="special">
             <span></span>
             <span></span>
             <span></span>
@@ -56,7 +56,7 @@
         <!-- ______Dark-light-mode______ -->
         <div class="dark-light-mode">
             <img src="./assets/icons/moon.svg" class="special" alt="moon icon">
-            <div class="switch special">
+            <div class="switch">
                 <div class="button"></div>
             </div>
             <img src="./assets/icons/sun.svg" class="special" alt="sun icon">
@@ -173,19 +173,19 @@
                 <div class="half-div">
                     <form id="email-form" name="email-form" data-name="Email Form" action="#" method="post">
                         <label for="name">Name</label>
-                        <input type="text" class="text-field w-input" maxlength="256" name="name"
+                        <input type="text" class="text-field w-input special" maxlength="256" name="name"
                             placeholder="Enter your name" id="name" required>
 
                         <label for="subject">Subject</label>
-                        <input type="text" class="text-field w-input" maxlength="256" name="subject"
+                        <input type="text" class="text-field w-input special" maxlength="256" name="subject"
                             placeholder="Enter a subject" id="subject">
 
                         <label for="email">Email Address</label>
-                        <input type="email" class="text-field w-input" maxlength="256" name="email"
+                        <input type="email" class="text-field w-input special" maxlength="256" name="email"
                             placeholder="Enter your email" id="email" required>
 
                         <label for="message">Message</label>
-                        <textarea class="text-field" name="message" maxlength="5000"
+                        <textarea class="text-field special" name="message" maxlength="5000"
                             placeholder="How can I help you today?" id="message" required></textarea>
 
                         <input type="submit" value="Submit" class="outlined-btn">
@@ -202,7 +202,7 @@
 
             </div>
         </section>
-        <footer>
+        <footer class="special">
             <div>
                 <img src="./assets/icons/LogoPlaceholder.svg" alt="logo image">
                 <ul>

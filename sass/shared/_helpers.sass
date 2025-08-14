@@ -1,13 +1,9 @@
 /* helpers */
 @use '../shared/variables' as *
 
-
 .wrapper
     padding: 0 $px
 
-.light-mode
-    background-color: $light-bg
-    color: $dark-text
-
 .special
     filter: invert(0)
+    transition: filter 0.5s ease

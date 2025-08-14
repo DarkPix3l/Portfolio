@@ -5,30 +5,21 @@ const button = document.querySelector(".button");
 let isMoved = false;
 const body = document.body;
 let invertMe = document.querySelectorAll(".special");
-const transitionStyle = "all 0.8s ease-out";
+const transitionStyle = "all 0.4s ease-out";
 
 /* HERO animation variable*/
 const hero = document.getElementById("hero");
 
 /* Switch animation */
 switchA.addEventListener("click", () => {
-  //all buddies here will transition smoothly: the text,paragraphs, the custom element with the .special class toggled
-  body.style.transition = transitionStyle;
   button.style.transition = "all 0.3s ease-out";
-  const filterValue = isMoved ? "invert(0)" : "invert(1)";
+  button.style.transform = isMoved ? "translateX(0)" : "translateX(100%)";
 
-  //apply the invert filter and the transition value for each element that has the class .special iterating instead of repeating
-  invertMe.forEach((element) => {
-    element.style.transition = transitionStyle;
-    element.style.filter = filterValue;
+  invertMe.forEach((el) => {
+    el.style.filter = isMoved ? "invert(0)" : "invert(1)";
   });
 
-  button.style.transform = isMoved ? "translateX(0px)" : "translateX(37px)";
-  //fix for smaller devices
-  if (window.innerWidth <= 768) {
-    button.style.transform = isMoved ? "translateX(0px)" : "translateX(30px)";
-  }
-  body.classList.toggle("light-mode", !isMoved);
+  body.setAttribute("data-theme", isMoved ? "dark" : "light");
   isMoved = !isMoved;
 });
 
@@ -67,10 +58,9 @@ const navSlide = () => {
         const targetId = link.getAttribute("href");
         const targetSection = document.querySelector(targetId);
 
-        //This is too fast
         targetSection.scrollIntoView({ behavior: "smooth" });
-        burger.classList.toggle("open");
-        nav.classList.toggle("isClicked");
+        burger.classList.remove("open");
+        nav.classList.remove("isClicked");
       });
     });
   });
