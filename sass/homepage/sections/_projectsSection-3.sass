@@ -29,11 +29,19 @@
             height: inherit
 
         .description
-            position: absolute
+            position: relative
             text-align: center
             opacity: 1
             transform: translateX(0) scale(1)
             transition: none
+            &::before
+                content: ""
+                width: 116%
+                height: 116%
+                inset: -8%
+                position: absolute
+                z-index: -1
+                border-radius: 3px
 
             @include xl
                 opacity: 0
