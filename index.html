@@ -265,33 +265,33 @@
 
 
                 <div class="half-div">
-                    <form id="email-form" name="email-form" data-name="Email Form" action="#" method="post">
-                        <label for="name">Name</label>
-                        <input type="text" class="text-field w-input special" maxlength="256" name="name"
-                            placeholder="Enter your name" id="name" required>
+                    <form id="email-form" name="email-form" data-name="Email Form" action="#" method="post"
+                        autocomplete="off">
+                        <div class="control-wrapper">
+                            <label for="name">Name</label>
+                            <input type="text" class="text-field w-input special" required minlength="2" maxlength="15" name="name"
+                                placeholder="Enter your name" id="name" required>
+                        </div>
 
-                        <label for="subject">Subject</label>
-                        <input type="text" class="text-field w-input special" maxlength="256" name="subject"
-                            placeholder="Enter a subject" id="subject">
+                        <div class="control-wrapper">
+                            <label for="subject">Subject</label>
+                            <input type="text" class="text-field w-input special" required minlength="5" maxlength="150" name="subject"
+                                placeholder="Enter a subject" id="subject">
+                        </div>
+                        
+                        <div class="control-wrapper">
+                            <label for="email">Email Address</label>
+                            <input type="email" class="text-field w-input special" required maxlength="256" name="email"
+                                placeholder="Enter your email" id="email" required>
+                        </div>
 
-                        <label for="email">Email Address</label>
-                        <input type="email" class="text-field w-input special" maxlength="256" name="email"
-                            placeholder="Enter your email" id="email" required>
-
-                        <label for="message">Message</label>
-                        <textarea class="text-field special" name="message" maxlength="5000"
-                            placeholder="How can I help you today?" id="message" required></textarea>
-
+                        <div class="control-wrapper">
+                            <label for="message">Message</label>
+                            <textarea class="text-field " name="message" maxlength="5000"
+                                placeholder="How can I help you today?" id="message" required></textarea>
+                        </div>
                         <input type="submit" value="Submit" class="outlined-btn">
                     </form>
-
-                    <!-- <div class="success-message w-form-done">
-                        <div>Thank you! Your submission has been received!</div>
-                      </div>
-                      
-                      <div class="error-message w-form-fail">
-                        <div>Oops! Something went wrong while submitting the form.</div>
-                      </div> -->
                 </div>
 
             </div>
@@ -307,11 +307,13 @@
             </div>
         </footer>
     </div>
-
     <script src="./js/general.js"></script>
     <script src="./js/data.js"></script>
     <script defer src="./js/ProjectLoader.js"></script>
     <script defer src="./js/infiniteScroll.js"></script>
+    <script defer src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script defer src="./js/formValidation.js"></script>
 </body>
 
 </html>

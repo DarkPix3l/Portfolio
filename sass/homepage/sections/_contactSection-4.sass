@@ -1,6 +1,7 @@
 @use '../../shared/_mixins' as *
 @use '../../shared/_helpers' as *
 @use '../../shared/_breakpoints' as *
+@use '../../shared/_variables' as *
     
 /*------ CONTACT SECTION ------- */
 
@@ -24,39 +25,41 @@
     width: 100%
     @include xl-2
         width: 50%
+    p
+        margin-bottom: 46px 
 
 textarea 
     resize: vertical
     max-width: 100%
-    min-height: 50px
-    
+    min-height: 150px
+
 label
     display: block
-    margin-bottom: 4px
+    margin-bottom: 8px
     font-size: 16px
     line-height: 22px
     font-weight: 400
     letter-spacing: 0.4px
 
 .text-field 
+    font-family: 'Roboto'
     width: 100%
-    margin-bottom: 48px
-    padding: 4px 0
+    padding: 8px
+    margin-bottom: 8px
     border-style: none none solid
-    border-width: 1px
+    border-width: 2px
     border-color: #ffffff75
     border-radius: 0
     background-color: transparent
     color: #fff
     outline: none
+    font-size: 1rem
     &:focus
-        border-color: #ffffff!important
+       border-color: #FFFF
 
 .outlined-btn
-    margin-top: 16px
-    margin-right: 16px
     padding: 8px 24px
-    border: 1px solid #fff
+    border: 1.5px solid #fff
     border-radius: 0
     background-color: #101010
     color: #fff
@@ -71,3 +74,22 @@ label
     filter: invert(0)
     &:hover
        filter: invert(1)
+
+.control-wrapper
+    margin-bottom: 48px
+
+
+.is-valid
+    border-color: $success
+    &:focus
+        border-color: $successFocus
+
+.is-invalid 
+    border-color: $error
+    &:focus
+        border-color: $errorFocus
+
+.validation-error-label
+    color: $error!important
+    letter-spacing: 1px
+    font-weight: 300
