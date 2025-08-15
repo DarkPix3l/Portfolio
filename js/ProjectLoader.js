@@ -15,7 +15,9 @@ function getProjectIdFromUrl() {
 
 function loadProjectContent() {
   const id = getProjectIdFromUrl();
+  if (!id) return;
   const project = projects.find((p) => p.pageId === id);
+  if (!project) return;
 
   /*   if (!project) {
     document.getElementById("project-details").innerHTML = "<p>Project not found.</p>";
@@ -44,7 +46,6 @@ function loadProjectContent() {
     });
   }
 
-
   const skills = project.skills;
   const skillListItems = document.querySelectorAll("#skills-list ul li");
   skillListItems.forEach((li, index) => {
@@ -62,4 +63,8 @@ function loadProjectContent() {
     }
   });
 }
-loadProjectContent();
+
+// Run content loading **only on project page**
+document.addEventListener("DOMContentLoaded", () => {
+  loadProjectContent();
+});
