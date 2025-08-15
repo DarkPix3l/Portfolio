@@ -56,28 +56,29 @@
             background-color: white
         @include lg
             display: flex
-            
-
-.Tcontainer
-    margin-top: 7%
-    display: flex
-    flex-direction: column
-    align-items: center
 
 #projects-shortcut
     width: 100px
     align-items: center
     display: flex
     flex-direction: column
-    &:hover
-        .lineDownArrow
-            transform: scaleY(1.4)
-        img
-            transform: translateY(20px)
-        .square
-            transform: translateY(20px) rotate(90deg)
-            border: none
-            background-color: white
+    position: absolute
+    transform: translateY(120%)
+    @include lg
+        transform: translateY(100%)
+    @media (hover:hover) and (pointer:fine) 
+        &:hover
+            .square
+                transform: translateY(60px) rotate(90deg)
+                border: none
+                background-color: white
+                border-radius: 100%
+                height: 31px
+            .lineDownArrow
+                transform: scaleY(0)
+                bottom: -45px
+            img
+                width: 70px
 
 .square
     width: 31px
@@ -86,7 +87,8 @@
     margin-top: 22px
     transform: translateY(0px) rotate(0)
     background-color: transparent
-    transition: background-color, transform 0.5s ease
+    border-radius: 0
+    transition: background-color, $global-trans, border-radius 0.5s ease-out, height 0.8s ease
 
 .downArrow
     width: 31px
@@ -101,13 +103,12 @@
         background-color: white
         position: relative
         bottom: -25px
-        transform-origin: top
+        transform-origin: bottom
         transform: scaleY(1)
-        transition: $global-trans
+        transition: $global-trans, bottom 0.5s ease
     img
         width: 38px
-        transform: translateY(0px)
-        transition: $global-trans
+        transition: width 0.5s ease
 
 /* #navigation
     display: flex
