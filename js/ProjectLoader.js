@@ -1,5 +1,5 @@
 const goToProject = () => {
-  document.querySelectorAll(".project").forEach((item) => {
+  document.querySelectorAll(".project, .img-container").forEach((item) => {
     item.addEventListener("click", () => {
       const projectId = item.dataset.projectId;
       window.location.href = `project_page.html?id=${projectId}`;
