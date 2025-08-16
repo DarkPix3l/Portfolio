@@ -26,6 +26,12 @@
 </head>
 
 <body data-theme="dark">
+    
+    <!-- ______Loader______ -->
+    <div id="loaderPage">
+        <div class="loader"></div>
+    </div>
+
     <!-- ______Menu Content______ -->
     <div id="nav-link" class="wrapper special">
         <a class="logo" href="#hero" aria-label="logo link for the first section"><img
@@ -269,16 +275,16 @@
                         autocomplete="off">
                         <div class="control-wrapper">
                             <label for="name">Name</label>
-                            <input type="text" class="text-field w-input special" required minlength="2" maxlength="15" name="name"
-                                placeholder="Enter your name" id="name" required>
+                            <input type="text" class="text-field w-input special" required minlength="2" maxlength="15"
+                                name="name" placeholder="Enter your name" id="name" required>
                         </div>
 
                         <div class="control-wrapper">
                             <label for="subject">Subject</label>
-                            <input type="text" class="text-field w-input special" required minlength="5" maxlength="150" name="subject"
-                                placeholder="Enter a subject" id="subject">
+                            <input type="text" class="text-field w-input special" required minlength="5" maxlength="150"
+                                name="subject" placeholder="Enter a subject" id="subject">
                         </div>
-                        
+
                         <div class="control-wrapper">
                             <label for="email">Email Address</label>
                             <input type="email" class="text-field w-input special" required maxlength="256" name="email"
@@ -307,6 +313,7 @@
             </div>
         </footer>
     </div>
+    <script src="./js/pageLoader.js"></script>
     <script src="./js/general.js"></script>
     <script src="./js/data.js"></script>
     <script defer src="./js/ProjectLoader.js"></script>
