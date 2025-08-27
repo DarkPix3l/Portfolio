@@ -4,22 +4,22 @@
     scroll-margin: 100px
     
 #container
-    padding-top: 0
-    padding-bottom: 0
     p
         line-height: 2
-    figure
-        margin: 50px 0
-        @include lg
-            margin: 90px 0
+        margin-bottom: 5.625rem
 
-    & figure:last-child
-        margin-bottom: 0 
+        @include lg
+            margin-bottom: 5.625rem //90px
 
     .project-image
         display: flex
         flex-direction: column
-        
-        figurecaption
-            margin-top: 10px
-            font-size: 0.8rem
+        margin-bottom: 90px
+        &:last-child
+            margin-bottom: 0
+        img
+            width: 100%
+    
+        figcaption
+            margin-top: 0.6rem
+            font-size: 0.85rem

@@ -27,9 +27,12 @@ function loadProjectContent() {
   document.querySelectorAll(".titleB").forEach((el) => {
     el.textContent = project.title;
   });
-  const mainImage = project.mainImage;
 
-  document.getElementById("hero").style.backgroundImage = `url(${mainImage})`;
+  const mainImage = project.mainImage;
+  const hero = document.getElementById("hero");
+  hero.insertAdjacentHTML(
+    "afterbegin", ` <img class="hero-bg" src="${mainImage.src}" srcset="${mainImage.srcset}" sizes="${mainImage.sizes}" alt="${mainImage.caption}" loading="lazy">`
+  );
   document.getElementById("description").textContent = project.description;
   document.getElementById("summary").textContent = project.summary;
 
@@ -39,8 +42,8 @@ function loadProjectContent() {
       const figure = document.createElement("figure");
       figure.classList.add("project-image");
       figure.innerHTML = `
-      <img src="${img.src}" alt="">
-      <figurecaption>${img.caption}</figurecaption>
+      <img src="${img.src}" srcset="${img.srcset}" sizes="${img.sizes}" alt="${img.caption}" loading="lazy">
+      <figcaption>${img.caption}</figcaption>
     `;
       imagesContainer.appendChild(figure);
     });
@@ -64,7 +67,6 @@ function loadProjectContent() {
   });
 }
 
-// Run content loading **only on project page**
 document.addEventListener("DOMContentLoaded", () => {
   loadProjectContent();
 });

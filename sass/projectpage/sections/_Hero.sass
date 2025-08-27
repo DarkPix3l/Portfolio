@@ -8,10 +8,14 @@
     opacity: 1
     transform: scale(1)
     position: fixed
-    background-position: 72% 52%
-    background-repeat: no-repeat
-    background-size: cover
-    
+    overflow: clip
+    .hero-bg  
+        position: absolute
+        height: 100svh
+        width: 100%
+        object-fit: cover
+        @include xl
+            height: 100vh
     @include xl
         height: 100vh
 
