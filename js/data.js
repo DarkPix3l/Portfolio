@@ -1,3 +1,5 @@
+const sizes = "(min-width: 2560px) 2560px,(min-width: 1920px) 1920px,(min-width: 1280px) 1280px,(min-width: 1440px) 1280px,(min-width: 1024px) 1024px,(min-width: 768px) 768px,(min-width: 425px) 480px,(min-width: 375px) 320px,100vw";
+
 const projects = [
   {
     pageId: "project1",
@@ -10,37 +12,35 @@ const projects = [
       src: "../assets/img/projects/project1/mainImage/cyber_2560.webp",
       srcset:
         "../assets/img/projects/project1/mainImage/cyber_320.webp 320w, ../assets/img/projects/project1/mainImage/cyber_480.webp 480w, ../assets/img/projects/project1/mainImage/cyber_768.webp 768w, ../assets/img/projects/project1/mainImage/cyber_1024.webp 1024w, ../assets/img/projects/project1/mainImage/cyber_1280.webp 1280w, ../assets/img/projects/project1/mainImage/cyber_1440.webp 1440w, ../assets/img/projects/project1/mainImage/cyber_1920.webp 1920w, ../assets/img/projects/project1/mainImage/cyber_2560.webp 2560w",
-      sizes:
-        "(min-width: 2560px) 2560px,(min-width: 1920px) 1920px,(min-width: 1280px) 1280px,(min-width: 1440px) 1280px,(min-width: 1024px) 1024px,(min-width: 768px) 768px,(min-width: 425px) 480px,(min-width: 375px) 320px,100vw",
+      sizes: sizes,
     },
     images: [
       {
         src: "../assets/img/placeholders/imgPlaceholder_hor_320.png",
         srcset:
           "../assets/img/placeholders/imgPlaceholder_hor_320.png 320w, ../assets/img/placeholders/imgPlaceholder_hor_375.png 375w, ../assets/img/placeholders/imgPlaceholder_hor_425.png 425w, ../assets/img/placeholders/imgPlaceholder_hor_768.png 768w, ../assets/img/placeholders/imgPlaceholder_hor_1024.png 1024w, ../assets/img/placeholders/imgPlaceholder_hor_1280.png 1280w, ../assets/img/placeholders/imgPlaceholder_hor_1440.png 1440w",
-        sizes:
-          "(min-width: 1440px) 1280px,(min-width: 1280px) 1280px,(min-width: 1024px) 1024px,(min-width: 768px) 768px,(min-width: 425px) 480px,(min-width: 375px) 320px,100vw",
+        sizes: sizes,
         caption: "User flow for the onboarding",
       },
       {
         src: "../assets/img/placeholders/imgPlaceholder_hor_320.png",
         srcset:
           "../assets/img/placeholders/imgPlaceholder_hor_320.png 320w, ../assets/img/placeholders/imgPlaceholder_hor_375.png 375w, ../assets/img/placeholders/imgPlaceholder_hor_425.png 425w, ../assets/img/placeholders/imgPlaceholder_hor_768.png 768w, ../assets/img/placeholders/imgPlaceholder_hor_1024.png 1024w, ../assets/img/placeholders/imgPlaceholder_hor_1280.png 1280w, ../assets/img/placeholders/imgPlaceholder_hor_1440.png 1440w",
-        sizes: "(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 960px",
+        sizes: sizes,
         caption: "Mobile responsive design",
       },
       {
         src: "../assets/img/placeholders/imgPlaceholder_hor_320.png",
         srcset:
           "../assets/img/placeholders/imgPlaceholder_hor_320.png 320w, ../assets/img/placeholders/imgPlaceholder_hor_375.png 375w, ../assets/img/placeholders/imgPlaceholder_hor_425.png 425w, ../assets/img/placeholders/imgPlaceholder_hor_768.png 768w, ../assets/img/placeholders/imgPlaceholder_hor_1024.png 1024w, ../assets/img/placeholders/imgPlaceholder_hor_1280.png 1280w, ../assets/img/placeholders/imgPlaceholder_hor_1440.png 1440w",
-        sizes: "(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 960px",
+        sizes: sizes,
         caption: "Admin dashboard interface",
       },
       {
         src: "../assets/img/placeholders/imgPlaceholder_hor_320.png",
         srcset:
           "../assets/img/placeholders/imgPlaceholder_hor_320.png 320w, ../assets/img/placeholders/imgPlaceholder_hor_375.png 375w, ../assets/img/placeholders/imgPlaceholder_hor_425.png 425w, ../assets/img/placeholders/imgPlaceholder_hor_768.png 768w, ../assets/img/placeholders/imgPlaceholder_hor_1024.png 1024w, ../assets/img/placeholders/imgPlaceholder_hor_1280.png 1280w, ../assets/img/placeholders/imgPlaceholder_hor_1440.png 1440w",
-        sizes: "(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 960px",
+        sizes: sizes,
         caption: "Admin dashboard interface",
       },
     ],
@@ -59,28 +59,28 @@ const projects = [
         src: "../assets/img/placeholders/imgPlaceholder_hor_320.png",
         srcset:
           "../assets/img/placeholders/imgPlaceholder_hor_320.png 320w, ../assets/img/placeholders/imgPlaceholder_hor_375.png 375w, ../assets/img/placeholders/imgPlaceholder_hor_425.png 425w, ../assets/img/placeholders/imgPlaceholder_hor_768.png 768w, ../assets/img/placeholders/imgPlaceholder_hor_1024.png 1024w, ../assets/img/placeholders/imgPlaceholder_hor_1280.png 1280w, ../assets/img/placeholders/imgPlaceholder_hor_1440.png 1440w",
-        sizes: "(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 960px",
+        sizes: sizes,
         caption: "User flow for the onboarding",
       },
       {
         src: "../assets/img/placeholders/imgPlaceholder_hor_320.png",
         srcset:
           "../assets/img/placeholders/imgPlaceholder_hor_320.png 320w, ../assets/img/placeholders/imgPlaceholder_hor_375.png 375w, ../assets/img/placeholders/imgPlaceholder_hor_425.png 425w, ../assets/img/placeholders/imgPlaceholder_hor_768.png 768w, ../assets/img/placeholders/imgPlaceholder_hor_1024.png 1024w, ../assets/img/placeholders/imgPlaceholder_hor_1280.png 1280w, ../assets/img/placeholders/imgPlaceholder_hor_1440.png 1440w",
-        sizes: "(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 960px",
+        sizes: sizes,
         caption: "Mobile responsive design",
       },
       {
         src: "../assets/img/placeholders/imgPlaceholder_hor_320.png",
         srcset:
           "../assets/img/placeholders/imgPlaceholder_hor_320.png 320w, ../assets/img/placeholders/imgPlaceholder_hor_375.png 375w, ../assets/img/placeholders/imgPlaceholder_hor_425.png 425w, ../assets/img/placeholders/imgPlaceholder_hor_768.png 768w, ../assets/img/placeholders/imgPlaceholder_hor_1024.png 1024w, ../assets/img/placeholders/imgPlaceholder_hor_1280.png 1280w, ../assets/img/placeholders/imgPlaceholder_hor_1440.png 1440w",
-        sizes: "(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 960px",
+        sizes: sizes,
         caption: "Admin dashboard interface",
       },
       {
         src: "../assets/img/placeholders/imgPlaceholder_hor_320.png",
         srcset:
           "../assets/img/placeholders/imgPlaceholder_hor_320.png 320w, ../assets/img/placeholders/imgPlaceholder_hor_375.png 375w, ../assets/img/placeholders/imgPlaceholder_hor_425.png 425w, ../assets/img/placeholders/imgPlaceholder_hor_768.png 768w, ../assets/img/placeholders/imgPlaceholder_hor_1024.png 1024w, ../assets/img/placeholders/imgPlaceholder_hor_1280.png 1280w, ../assets/img/placeholders/imgPlaceholder_hor_1440.png 1440w",
-        sizes: "(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 960px",
+        sizes: sizes,
         caption: "Admin dashboard interface",
       },
     ],
@@ -99,28 +99,28 @@ const projects = [
         src: "../assets/img/placeholders/imgPlaceholder_hor_320.png",
         srcset:
           "../assets/img/placeholders/imgPlaceholder_hor_320.png 320w, ../assets/img/placeholders/imgPlaceholder_hor_375.png 375w, ../assets/img/placeholders/imgPlaceholder_hor_425.png 425w, ../assets/img/placeholders/imgPlaceholder_hor_768.png 768w, ../assets/img/placeholders/imgPlaceholder_hor_1024.png 1024w, ../assets/img/placeholders/imgPlaceholder_hor_1280.png 1280w, ../assets/img/placeholders/imgPlaceholder_hor_1440.png 1440w",
-        sizes: "(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 960px",
+        sizes: sizes,
         caption: "User flow for the onboarding",
       },
       {
         src: "../assets/img/placeholders/imgPlaceholder_hor_320.png",
         srcset:
           "../assets/img/placeholders/imgPlaceholder_hor_320.png 320w, ../assets/img/placeholders/imgPlaceholder_hor_375.png 375w, ../assets/img/placeholders/imgPlaceholder_hor_425.png 425w, ../assets/img/placeholders/imgPlaceholder_hor_768.png 768w, ../assets/img/placeholders/imgPlaceholder_hor_1024.png 1024w, ../assets/img/placeholders/imgPlaceholder_hor_1280.png 1280w, ../assets/img/placeholders/imgPlaceholder_hor_1440.png 1440w",
-        sizes: "(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 960px",
+        sizes: sizes,
         caption: "Mobile responsive design",
       },
       {
         src: "../assets/img/placeholders/imgPlaceholder_hor_320.png",
         srcset:
           "../assets/img/placeholders/imgPlaceholder_hor_320.png 320w, ../assets/img/placeholders/imgPlaceholder_hor_375.png 375w, ../assets/img/placeholders/imgPlaceholder_hor_425.png 425w, ../assets/img/placeholders/imgPlaceholder_hor_768.png 768w, ../assets/img/placeholders/imgPlaceholder_hor_1024.png 1024w, ../assets/img/placeholders/imgPlaceholder_hor_1280.png 1280w, ../assets/img/placeholders/imgPlaceholder_hor_1440.png 1440w",
-        sizes: "(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 960px",
+        sizes: sizes,
         caption: "Admin dashboard interface",
       },
       {
         src: "../assets/img/placeholders/imgPlaceholder_hor_320.png",
         srcset:
           "../assets/img/placeholders/imgPlaceholder_hor_320.png 320w, ../assets/img/placeholders/imgPlaceholder_hor_375.png 375w, ../assets/img/placeholders/imgPlaceholder_hor_425.png 425w, ../assets/img/placeholders/imgPlaceholder_hor_768.png 768w, ../assets/img/placeholders/imgPlaceholder_hor_1024.png 1024w, ../assets/img/placeholders/imgPlaceholder_hor_1280.png 1280w, ../assets/img/placeholders/imgPlaceholder_hor_1440.png 1440w",
-        sizes: "(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 960px",
+        sizes: sizes,
         caption: "Admin dashboard interface",
       },
     ],
@@ -140,28 +140,28 @@ const projects = [
         src: "../assets/img/placeholders/imgPlaceholder_hor_320.png",
         srcset:
           "../assets/img/placeholders/imgPlaceholder_hor_320.png 320w, ../assets/img/placeholders/imgPlaceholder_hor_375.png 375w, ../assets/img/placeholders/imgPlaceholder_hor_425.png 425w, ../assets/img/placeholders/imgPlaceholder_hor_768.png 768w, ../assets/img/placeholders/imgPlaceholder_hor_1024.png 1024w, ../assets/img/placeholders/imgPlaceholder_hor_1280.png 1280w, ../assets/img/placeholders/imgPlaceholder_hor_1440.png 1440w",
-        sizes: "(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 960px",
+        sizes: sizes,
         caption: "User flow for the onboarding",
       },
       {
         src: "../assets/img/placeholders/imgPlaceholder_hor_320.png",
         srcset:
           "../assets/img/placeholders/imgPlaceholder_hor_320.png 320w, ../assets/img/placeholders/imgPlaceholder_hor_375.png 375w, ../assets/img/placeholders/imgPlaceholder_hor_425.png 425w, ../assets/img/placeholders/imgPlaceholder_hor_768.png 768w, ../assets/img/placeholders/imgPlaceholder_hor_1024.png 1024w, ../assets/img/placeholders/imgPlaceholder_hor_1280.png 1280w, ../assets/img/placeholders/imgPlaceholder_hor_1440.png 1440w",
-        sizes: "(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 960px",
+        sizes: sizes,
         caption: "Mobile responsive design",
       },
       {
         src: "../assets/img/placeholders/imgPlaceholder_hor_320.png",
         srcset:
           "../assets/img/placeholders/imgPlaceholder_hor_320.png 320w, ../assets/img/placeholders/imgPlaceholder_hor_375.png 375w, ../assets/img/placeholders/imgPlaceholder_hor_425.png 425w, ../assets/img/placeholders/imgPlaceholder_hor_768.png 768w, ../assets/img/placeholders/imgPlaceholder_hor_1024.png 1024w, ../assets/img/placeholders/imgPlaceholder_hor_1280.png 1280w, ../assets/img/placeholders/imgPlaceholder_hor_1440.png 1440w",
-        sizes: "(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 960px",
+        sizes: sizes,
         caption: "Admin dashboard interface",
       },
       {
         src: "../assets/img/placeholders/imgPlaceholder_hor_320.png",
         srcset:
           "../assets/img/placeholders/imgPlaceholder_hor_320.png 320w, ../assets/img/placeholders/imgPlaceholder_hor_375.png 375w, ../assets/img/placeholders/imgPlaceholder_hor_425.png 425w, ../assets/img/placeholders/imgPlaceholder_hor_768.png 768w, ../assets/img/placeholders/imgPlaceholder_hor_1024.png 1024w, ../assets/img/placeholders/imgPlaceholder_hor_1280.png 1280w, ../assets/img/placeholders/imgPlaceholder_hor_1440.png 1440w",
-        sizes: "(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 960px",
+        sizes: sizes,
         caption: "Admin dashboard interface",
       },
     ],
