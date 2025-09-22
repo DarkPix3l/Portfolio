@@ -6,8 +6,9 @@ $breakpoints: (
   "md": 425px,
   "lg": 768px, //tablet
   "xl": 1024px,
-  "xl-2": 1280px,
-  "xl-3": 1440px
+  "xl-2": 1440px,
+  "xl-3": 1920px,
+  "xl-4": 2560px
 );
 
 @mixin xs()
@@ -36,4 +37,8 @@ $breakpoints: (
 
 @mixin xl-3()
     @media ( min-width: map.get($breakpoints, "xl-3") )
+        @content
+
+@mixin xl-4()
+    @media ( min-width: map.get($breakpoints, "xl-4") )
         @content
