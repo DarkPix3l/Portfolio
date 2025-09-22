@@ -1,8 +1,13 @@
 /* helpers */
 @use '../shared/variables' as *
+@use '../shared/_breakpoints' as *
 
 .wrapper
-    padding: 0 $px
+    width: 80vw
+    max-width: 1920px
+    margin: auto
+    @include xl-4
+        width: 60vw
 
 .special
     filter: invert(0)
