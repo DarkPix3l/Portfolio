@@ -204,43 +204,80 @@ const projects = [
   },
   {
     pageId: "project3",
-    title: "Neat Project 3",
+    title: "Coders App",
     summary:
-      "Ut ac fringilla tellus. Proin quam metus, interdum ut posuere non, consequat eu ante. Etiam vel placerat ante. Donec mollis turpis sit amet ipsum commodo fermentum. Suspendisse feugiat augue ut massa gravida, pretium ultrices velit accumsan. Donec malesuada semper viverra.",
+      `CodersApp is a coding challenge platform prototype designed to help developers practice and improve their skills. Built as a frontend-focused web application, it provides authentication, challenge browsing, and an integrated coding workspace with Markdown-based descriptions.`,
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer et lacus ac leoultrices posuere. Donec mattis tellus eu turpis porta rutrum. Nam lacus lorem, laoreet ut nibh non, vehicula egestas ante. Cras vulputate tristique quam, id fermentum dolor malesuada in. Praesent sed ullamcorper dolor. Nunc in accumsan nunc. Donec tempor dolor nec diam malesuada, sit amet feugiat lorem tempor. Vivamus a purus et magna semper fringilla commodo a urna. Donec sem ante, iaculis ut turpis eleifend, euismod molestie metus. Phasellus tincidunt dignissim lacus, porta sagittis mi fringilla sit amet. Nullam sit amet nisl sed est sagittis sagittis quis eu turpis. In porttitor mollis quam in interdum. In aliquam velit turpis, sed ultricies massa aliquet sed. Aliquam ac erat at nisl hendrerit lacinia vel id augue. Ut sed nisl at ipsum pharetra sollicitudin vel id elit.",
-    mainImage: "../assets/img/projects/geom.jpg",
+      `The project delivers a responsive, modern frontend built with React, Redux Toolkit, and React Router, styled using Tailwind CSS. It features protected routes for authenticated users, a customizable dark/light mode, and a challenge library loaded dynamically from JSON. Each challenge supports Markdown rendering for rich descriptions, while the integrated CodeMirror workspace allows users to write and test code directly in the browser. Designed with scalability in mind, CodersApp emphasizes clean UI, intuitive navigation, and maintainable state management, with a manager dashboard planned for future expansion. The platform demonstrates practical application of modern frontend patterns, state handling, and developer-centric features.`,
+    mainImage: {
+      src: "../assets/img/projects/project3/1_mainimage/1_codersapp_mainimage_320.webp",
+      srcset: `
+        ../assets/img/projects/project3/1_mainimage/1_codersapp_mainimage_320.webp 320w,
+        ../assets/img/projects/project3/1_mainimage/1_codersapp_mainimage_375.webp 375w,
+        ../assets/img/projects/project3/1_mainimage/1_codersapp_mainimage_768.webp 768w,
+        ../assets/img/projects/project3/1_mainimage/1_codersapp_mainimage_1024.webp 1024w,
+        ../assets/img/projects/project3/1_mainimage/1_codersapp_mainimage_1440.webp 1440w,
+        ../assets/img/projects/project3/1_mainimage/1_codersapp_mainimage_1920.webp 1920w,
+        ../assets/img/projects/project3/1_mainimage/1_codersapp_mainimage_2560.webp 2560w,
+        ../assets/img/projects/project3/1_mainimage/1_codersapp_mainimage_3840.webp 3840w
+        `,
+      sizes: sizes,
+    },
     images: [
       {
-        src: "../assets/img/placeholders/imgPlaceholder_hor_320.png",
-        srcset:
-          "../assets/img/placeholders/imgPlaceholder_hor_320.png 320w, ../assets/img/placeholders/imgPlaceholder_hor_375.png 375w, ../assets/img/placeholders/imgPlaceholder_hor_425.png 425w, ../assets/img/placeholders/imgPlaceholder_hor_768.png 768w, ../assets/img/placeholders/imgPlaceholder_hor_1024.png 1024w, ../assets/img/placeholders/imgPlaceholder_hor_1280.png 1280w, ../assets/img/placeholders/imgPlaceholder_hor_1440.png 1440w",
+        src: `../assets/img/projects/project3/2_login/2_codersapp_login_320.webp`,
+        srcset: `
+        ../assets/img/projects/project3/2_login/2_codersapp_login_320.webp 320w,
+        ../assets/img/projects/project3/2_login/2_codersapp_login_375.webp 375w,
+        ../assets/img/projects/project3/2_login/2_codersapp_login_768.webp 768w,
+        ../assets/img/projects/project3/2_login/2_codersapp_login_1024.webp 1024w,
+        ../assets/img/projects/project3/2_login/2_codersapp_login_1440.webp 1440w,
+        ../assets/img/projects/project3/2_login/2_codersapp_login_1920.webp 1920w
+        `,
         sizes: sizes,
-        caption: "User flow for the onboarding",
+        caption: "Login page",
       },
       {
-        src: "../assets/img/placeholders/imgPlaceholder_hor_320.png",
-        srcset:
-          "../assets/img/placeholders/imgPlaceholder_hor_320.png 320w, ../assets/img/placeholders/imgPlaceholder_hor_375.png 375w, ../assets/img/placeholders/imgPlaceholder_hor_425.png 425w, ../assets/img/placeholders/imgPlaceholder_hor_768.png 768w, ../assets/img/placeholders/imgPlaceholder_hor_1024.png 1024w, ../assets/img/placeholders/imgPlaceholder_hor_1280.png 1280w, ../assets/img/placeholders/imgPlaceholder_hor_1440.png 1440w",
+        src: "../assets/img/projects/project3/3_leaderboard/3_codersapp_leaderboard_320.webp",
+        srcset: `
+        ../assets/img/projects/project3/3_leaderboard/3_codersapp_leaderboard_320.webp 320w,
+        ../assets/img/projects/project3/3_leaderboard/3_codersapp_leaderboard_375.webp 375w,
+        ../assets/img/projects/project3/3_leaderboard/3_codersapp_leaderboard_768.webp 768w,
+        ../assets/img/projects/project3/3_leaderboard/3_codersapp_leaderboard_1024.webp 1024w,
+        ../assets/img/projects/project3/3_leaderboard/3_codersapp_leaderboard_1440.webp 1440w,
+        ../assets/img/projects/project3/3_leaderboard/3_codersapp_leaderboard_1920.webp 1920w
+        `,
         sizes: sizes,
-        caption: "Mobile responsive design",
+        caption: `Leaderboard page`,
       },
       {
-        src: "../assets/img/placeholders/imgPlaceholder_hor_320.png",
-        srcset:
-          "../assets/img/placeholders/imgPlaceholder_hor_320.png 320w, ../assets/img/placeholders/imgPlaceholder_hor_375.png 375w, ../assets/img/placeholders/imgPlaceholder_hor_425.png 425w, ../assets/img/placeholders/imgPlaceholder_hor_768.png 768w, ../assets/img/placeholders/imgPlaceholder_hor_1024.png 1024w, ../assets/img/placeholders/imgPlaceholder_hor_1280.png 1280w, ../assets/img/placeholders/imgPlaceholder_hor_1440.png 1440w",
+        src: "../assets/img/projects/project3/4_challenges/4_easybank_mobile-design_320.webp",
+        srcset: `
+        ../assets/img/projects/project3/4_challenges/4_codersapp_challenges_320.webp 320w,
+        ../assets/img/projects/project3/4_challenges/4_codersapp_challenges_375.webp 375w,
+        ../assets/img/projects/project3/4_challenges/4_codersapp_challenges_768.webp 768w,
+        ../assets/img/projects/project3/4_challenges/4_codersapp_challenges_1024.webp 1024w,
+        ../assets/img/projects/project3/4_challenges/4_codersapp_challenges_1440.webp 1440w,
+        ../assets/img/projects/project3/4_challenges/4_codersapp_challenges_1920.webp 1920w
+        `,
         sizes: sizes,
-        caption: "Admin dashboard interface",
+        caption: "Challenges page",
       },
       {
-        src: "../assets/img/placeholders/imgPlaceholder_hor_320.png",
-        srcset:
-          "../assets/img/placeholders/imgPlaceholder_hor_320.png 320w, ../assets/img/placeholders/imgPlaceholder_hor_375.png 375w, ../assets/img/placeholders/imgPlaceholder_hor_425.png 425w, ../assets/img/placeholders/imgPlaceholder_hor_768.png 768w, ../assets/img/placeholders/imgPlaceholder_hor_1024.png 1024w, ../assets/img/placeholders/imgPlaceholder_hor_1280.png 1280w, ../assets/img/placeholders/imgPlaceholder_hor_1440.png 1440w",
+        src: "../assets/img/projects/project3/5_darkmode/4_easybank_mobile-design_320.webp",
+        srcset: `
+        ../assets/img/projects/project3/5_darkmode/5_codersapp_darkmode_320.webp 320w,
+        ../assets/img/projects/project3/5_darkmode/5_codersapp_darkmode_375.webp 375w,
+        ../assets/img/projects/project3/5_darkmode/5_codersapp_darkmode_768.webp 768w,
+        ../assets/img/projects/project3/5_darkmode/5_codersapp_darkmode_1024.webp 1024w,
+        ../assets/img/projects/project3/5_darkmode/5_codersapp_darkmode_1440.webp 1440w,
+        ../assets/img/projects/project3/5_darkmode/5_codersapp_darkmode_1920.webp 1920w
+        `,
         sizes: sizes,
-        caption: "Admin dashboard interface",
+        caption: "Challenges page - Darkmode preview",
       },
     ],
-    skills: ["Figma", "Design Systems", "Accessibility", "HTML/CSS"],
+    skills: ["React", "Rexux + Async Thunks", "Tailwind"],
   },
 
   {
