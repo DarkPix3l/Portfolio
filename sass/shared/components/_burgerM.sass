@@ -48,7 +48,7 @@
     flex-direction: column
     align-items: center
     width: 100%
-    background-color: rgba(0, 0, 0, 0.9)
+    background-color: rgba(16,16 ,16 ,0.3 )
     position: fixed
     justify-content: space-between
     z-index: 3
@@ -56,15 +56,16 @@
     opacity: 0
     padding: 0rem 10vw
     visibility: hidden
+    backdrop-filter: blur(10px)
     @include lg
         flex-direction: row
         
-
     .logo
         transform: scale(0.2)
         transform-origin: center
         transition: $global-trans
-        width: 32px
+        width: fit-content
+        filter: brightness(2)
 
     ul
         display: flex
@@ -86,7 +87,7 @@
             
     &.isClicked
         opacity: 1
-        padding: 1.5rem 10vw
+        padding: 0.8rem 10vw
         visibility: visible
         .logo
-            transform: scale(0.4)
+            transform: scale(0.9)
