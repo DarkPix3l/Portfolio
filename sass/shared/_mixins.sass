@@ -5,3 +5,14 @@
     flex-direction: $direction
     align-items: $alignIT
     justify-content: $justC
+
+@mixin hoverEffectGrow($scale: 1.2)
+    transition: all 0.3s ease
+    &:hover
+        transform: scale($scale)
+
+@mixin hoverEffectText($tracking: 1px, $shadow: 0px 0px 14px #74f8f4ff)
+    transition: letter-spacing 0.3s ease, text-shadow 0.3s ease
+    &:hover
+        letter-spacing: $tracking
+        text-shadow: $shadow

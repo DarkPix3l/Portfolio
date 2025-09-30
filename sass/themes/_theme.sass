@@ -6,6 +6,7 @@ $themes: (
     bg: $light-bg,
     text: $dark-text,
     logo-shadow: 0px 0px 3px rgba(16,16,16,0.3),
+    navlink-background: rgba(182, 182, 182, 0.3),
     description-bg: rgba(255,255,255,0.5),
     footer-shadow: 0rem 1rem 5rem $dark-text,
     form-focus: #101010d7
@@ -14,6 +15,7 @@ $themes: (
     bg: $dark-bg,
     text: $light-text,
     logo-shadow: 0px 0px -1px rgba(16,16,16,0.3),
+    navlink-background: rgba(16,16 ,16 ,0.3 ),
     description-bg: rgba(0,0,0,0.5),
     footer-shadow: 0rem 1rem 5rem $light-bg,
     form-focus: #efefefda
@@ -24,7 +26,10 @@ $themes: (
   body[data-theme="#{$name}"]
     background-color: map.get($colors, bg)
     color: map.get($colors, text)
-
+    #nav-link
+      background-color: map.get($colors, navlink-background)
+      a
+        color: map.get($colors, text)
     .logo
         filter: drop-shadow(map.get($colors, logo-shadow))
 
@@ -37,3 +42,5 @@ $themes: (
 
     footer
         box-shadow: map.get($colors, footer-shadow)
+        a
+          color: map.get($colors, text)
