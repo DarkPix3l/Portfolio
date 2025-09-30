@@ -1,0 +1,39 @@
+@use "sass:map"
+@use '../shared/_variables' as *
+
+$themes: (
+  light: (
+    bg: $light-bg,
+    text: $dark-text,
+    logo-shadow: 0px 0px 3px rgba(16,16,16,0.3),
+    description-bg: rgba(255,255,255,0.5),
+    footer-shadow: 0rem 1rem 5rem $dark-text,
+    form-focus: #101010d7
+  ),
+  dark: (
+    bg: $dark-bg,
+    text: $light-text,
+    logo-shadow: 0px 0px -1px rgba(16,16,16,0.3),
+    description-bg: rgba(0,0,0,0.5),
+    footer-shadow: 0rem 1rem 5rem $light-bg,
+    form-focus: #efefefda
+  )
+)
+
+@each $name, $colors in $themes
+  body[data-theme="#{$name}"]
+    background-color: map.get($colors, bg)
+    color: map.get($colors, text)
+
+    .logo
+        filter: drop-shadow(map.get($colors, logo-shadow))
+
+    .description::before
+        background-color: map.get($colors, description-bg)
+    .text-field
+        color: map.get($colors, text)
+        &:focus
+            border-color: map.get($colors, form-focus)
+
+    footer
+        box-shadow: map.get($colors, footer-shadow)

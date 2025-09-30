@@ -1,5 +1,5 @@
 @use '../../shared/_mixins' as *
-@use '../../shared/_helpers' as *
+@use '../../shared/_utilities' as *
 @use '../../shared/_breakpoints' as *
 @use '../../shared/_variables' as *
     
@@ -48,14 +48,11 @@ label
     margin-bottom: 8px
     border-style: none none solid
     border-width: 2px
-    border-color: #ffffff75
+    border-color: #a1a1a1ff
     border-radius: 0
     background-color: transparent
-    color: #fff
     outline: none
     font-size: 1rem
-    &:focus
-       border-color: #FFFF
 
 .outlined-btn
     padding: 8px 24px
@@ -77,7 +74,6 @@ label
 
 .control-wrapper
     margin-bottom: 48px
-
 
 .is-valid
     border-color: $success

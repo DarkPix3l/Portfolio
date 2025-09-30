@@ -28,10 +28,10 @@
 <body data-theme="dark">
 
     <!-- ______Menu Content______ -->
-    <div id="nav-link" class="special">
+    <div id="nav-link">
         <a class="logo" href="/" aria-label="home logo button"><img
                 src="./assets/icons/logo.svg" alt="logo"></a>
-        <ul>
+        <ul class="special">
             <li class="menulinks"><a href="#skills">Skills</a></li>
             <li class="menulinks"><a href="#projects">Projects</a></li>
             <li class="menulinks"><a href="#contact">Contact</a></li>
@@ -76,7 +76,7 @@
             (min-width: 1280px) 1280px,
             (min-width: 1024px) 1024px,
             (min-width: 768px) 768px,
-            100vw" alt="Hero image" loading="lazy" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            100vw" alt="Abstract geometry image" loading="lazy" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <div class="wrapper hero-wrapper">
             <div class="Tcontainer">
                 <h1 id="bigTitle">Hi there, I'm XXX</h1>
@@ -236,7 +236,7 @@
             <div id="container">
 
                 <div class="project" data-project-id="project1">
-                    <img id="hero-background" class="special"
+                    <img id="hero-background"
                         src="./assets/img/projects/project1/0_mainImage_prev/0_elevher_preview_ver.576.webp" srcset="
                     ./assets/img/projects/project1/0_mainImage_prev/0_elevher_preview_ver.576.webp  384w 576h,
                     ./assets/img/projects/project1/0_mainImage_prev/0_elevher_preview_ver.768.webp  512w 768h,
@@ -337,7 +337,7 @@
         <section id="contact">
             <div class="wrapper contact-wrapper">
                 <div id="contact-text" class="half-div">
-                    <h2>Let’s build something <br>together!</h2>
+                    <h2>Let’s build something together!</h2>
                     <p>Feel free to reach out if you’re looking for
                         a developer, have a question, or just want to connect.
                     </p>
@@ -350,25 +350,25 @@
                         autocomplete="off">
                         <div class="control-wrapper">
                             <label for="name">Name</label>
-                            <input type="text" class="text-field w-input special" required minlength="2" maxlength="15"
+                            <input type="text" class="text-field " required minlength="2" maxlength="15"
                                 name="name" placeholder="Enter your name" id="name" required>
                         </div>
 
                         <div class="control-wrapper">
                             <label for="subject">Subject</label>
-                            <input type="text" class="text-field w-input special" required minlength="5" maxlength="150"
+                            <input type="text" class="text-field" required minlength="5" maxlength="150"
                                 name="subject" placeholder="Enter a subject" id="subject">
                         </div>
 
                         <div class="control-wrapper">
                             <label for="email">Email Address</label>
-                            <input type="email" class="text-field w-input special" required maxlength="256" name="email"
+                            <input type="email" class="text-field" required maxlength="256" name="email"
                                 placeholder="Enter your email" id="email" required>
                         </div>
 
                         <div class="control-wrapper">
                             <label for="message">Message</label>
-                            <textarea class="text-field " name="message" maxlength="5000"
+                            <textarea class="text-field" name="message" maxlength="5000"
                                 placeholder="How can I help you today?" id="message" required></textarea>
                         </div>
                         <input type="submit" value="Submit" class="outlined-btn">
@@ -377,10 +377,10 @@
 
             </div>
         </section>
-        <footer class="special">
+        <footer>
             <div>
-                <img src="./assets/icons/logo.svg" alt="logo image">
-                <ul>
+                <img class="logo" src="./assets/icons/logo.svg" alt="logo image">
+                <ul class="special">
                     <li><a href="">Github</a></li>
                     <li><a href="">Behance</a></li>
                     <li><a href="">Dribble</a></li>
