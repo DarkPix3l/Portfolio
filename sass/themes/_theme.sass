@@ -9,7 +9,8 @@ $themes: (
     navlink-background: rgba(182, 182, 182, 0.3),
     description-bg: rgba(255,255,255,0.5),
     footer-shadow: 0rem 1rem 5rem $dark-text,
-    form-focus: #101010d7
+    form-focus: #101010d7,
+    closeIcon-bg: aliceblue
   ),
   dark: (
     bg: $dark-bg,
@@ -18,7 +19,8 @@ $themes: (
     navlink-background: rgba(16,16 ,16 ,0.3 ),
     description-bg: rgba(0,0,0,0.5),
     footer-shadow: 0rem 1rem 5rem $light-bg,
-    form-focus: #efefefda
+    form-focus: #efefefda,
+    closeIcon-bg: transparent
   )
 )
 
@@ -39,8 +41,10 @@ $themes: (
         color: map.get($colors, text)
         &:focus
             border-color: map.get($colors, form-focus)
-
     footer
         box-shadow: map.get($colors, footer-shadow)
         a
           color: map.get($colors, text)
+    .closeIcon
+        border-radius: 13px
+        background: map.get($colors, closeIcon-bg)

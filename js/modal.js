@@ -3,17 +3,15 @@ const closeIcon = document.querySelector(".closeIcon");
 const openModal = document.querySelector(".frame");
 const grid = document.querySelector(".grid");
 
-modal.style.transition = "all 0.3s ease";
+modal.style.transition = "all 0.3s ease-in";
 
 function openModalFunc() {
-
   modal.classList.add("opening");
   body.style.overflowY = "hidden";
   grid.style.transform = "translateY(0px)";
 }
 
 function closeModalFunc() {
-
   modal.classList.remove("opening");
   body.style.overflowY = "auto";
   grid.style.transform = "translateY(-109px)";
