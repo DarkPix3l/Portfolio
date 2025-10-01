@@ -12,41 +12,34 @@
     align-items: center
     justify-content: center
     flex-shrink: 0
-    padding: 15px
-    gap: 16px
-    @include lg
-        gap: 21px
-        height: fit-content
-
-    .switch
-        width: 63px
-        height: fit-content
+    .neoBar
+        gap: 16px
         display: flex
-        flex-shrink: 0
-        border-radius: 10px
-        padding: 0.5px
-        background-color: rgb(87, 79, 79)
-        box-shadow: rgba(0, 0, 0, 0.8) 0px 0px 22.0625px 0.125px inset, rgba(0, 0, 0, 0.8) 0px 0.0625px 5.125px inset,rgb(255,255,255) 0px 0px 3px -1px
-        cursor: pointer
-        @include lg
-            width: 80px
+        background-color: #b6b6b621
+        backdrop-filter: blur(4px)
+        filter: noise(5)
+        border-radius: 2rem
+        padding: 8px 5%
+        box-shadow: 5px 3px 6px 0px rgba(18, 21, 22, 0.6), inset 1px 1px 1px 0px rgba(255, 255, 255, 0.5)
+        img
+            filter: drop-shadow(1px 0px 4px black)
 
-    .button
-        width: 50%
-        height: 27px
-        position: relative
-        border-radius: 10px
-        box-shadow: inset 0 0 5.0625px 1.125px rgb(0, 0, 0), inset -6px -4.5px 3.0625px 3.125px rgba(255, 255, 255, 0.8), 0px 0px 15px black
-        border: 0.1px solid rgba(255, 255, 255, 0.2)
-        background-color: rgb(212, 212, 212)
-        transform: translateX(0px)
-        /*   transition: left 0.5 ease */
+        .switch
+            width: 60px
+            height: 30px
+            border-radius: 2rem
+            padding: 3px
+            background-color: rgb(87, 79, 79)
+            box-shadow: rgba(0, 0, 0, 0.8) 0px 0px 22.0625px 0.125px inset, rgba(0, 0, 0, 0.8) 0px 0.0625px 5.125px inset,rgb(255,255,255) 0px 0px 3px -1px
+            cursor: pointer
+            overflow: hidden
+            .button
+                width: 50%
+                height: 100%
+                border-radius: 2rem
+                box-shadow: 5px 5px 10px #141414, -5px -5px 10px #282828, inset 1px 2px 2px 1px #FFFF, inset -1px -1px 3px 0px #101010
+                background-color: rgb(212, 212, 212)
+                transform: translateX(0px)
 
-        @include lg
-            height: 35px
-
-        &:hover
-            background-color: grey
-            
-/* .active
-    transform: translateX(50px) */
+                &:hover
+                    background-color: grey
