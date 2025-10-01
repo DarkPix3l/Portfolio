@@ -19,41 +19,31 @@ function loadProjectContent() {
   const project = projects.find((p) => p.pageId === id);
   if (!project) return;
 
-  /*   if (!project) {
-    document.getElementById("project-details").innerHTML = "<p>Project not found.</p>";
-    return;
-  } */
-
   document.querySelectorAll(".titleB").forEach((el) => {
     el.textContent = project.title;
   });
 
   const mainImage = project.mainImage;
   const hero = document.getElementById("hero");
-  hero.insertAdjacentHTML(
-    "afterbegin", ` <img class="hero-bg" src="${mainImage.src}" srcset="${mainImage.srcset}" sizes="${mainImage.sizes}" alt="${mainImage.caption}" loading="lazy">`
-  );
-  document.getElementById("description").textContent = project.description;
-  document.getElementById("summary").textContent = project.summary;
 
-  const imagesContainer = document.getElementById("container");
-  if (imagesContainer) {
-    project.images.forEach((img) => {
-      const figure = document.createElement("figure");
-      figure.classList.add("project-image");
-      figure.innerHTML = `
-      <img src="${img.src}" srcset="${img.srcset}" sizes="${img.sizes}" alt="${img.caption}" loading="lazy">
-      <figcaption>${img.caption}</figcaption>
-    `;
-      imagesContainer.appendChild(figure);
-    });
+  if (hero) {
+    const img = document.createElement("img");
+    img.classList.add("hero-bg");
+
+    img.setAttribute("src", mainImage.src);
+    img.setAttribute("srcset", mainImage.srcset);
+    img.setAttribute("sizes", mainImage.sizes);
+    img.setAttribute("alt", `${project.title} showcase image`);
+    img.setAttribute("loading", "lazy");
+    hero.appendChild(img);
   }
 
+  document.getElementById("description").textContent = project.description;
+  document.getElementById("summary").textContent = project.summary;
   const skills = project.skills;
   const skillListItems = document.querySelectorAll("#skills-list ul li");
   skillListItems.forEach((li, index) => {
     if (skills[index]) {
-      // Get the span with the icon
       const iconSpan = li.querySelector("span.P-icon");
 
       // Remove everything after the icon span
@@ -65,6 +55,29 @@ function loadProjectContent() {
       li.appendChild(document.createTextNode(skills[index]));
     }
   });
+
+  const imagesContainer = document.getElementById("container");
+  if (imagesContainer) {
+    project.images.forEach((img) => {
+      const figure = document.createElement("figure");
+      figure.classList.add("project-image");
+
+      const imageElement = document.createElement("img");
+      imageElement.setAttribute("src", img.src);
+      imageElement.setAttribute("srcset", img.srcset);
+      imageElement.setAttribute("sizes", img.sizes);
+      imageElement.setAttribute("alt", img.caption);
+      imageElement.setAttribute("loading", "lazy");
+
+      const captionElement = document.createElement("figcaption");
+      captionElement.textContent = img.caption;
+
+      figure.appendChild(imageElement);
+      figure.appendChild(captionElement);
+
+      imagesContainer.appendChild(figure);
+    });
+  }
 }
 
 document.addEventListener("DOMContentLoaded", () => {

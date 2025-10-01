@@ -349,12 +349,3 @@ const projects = [
     ],
   },
 ];
-
-/* const iconMap = {
-  "UI Design": "triangle",
-  "Web Development": "monitor",
-  JavaScript: "code",
-  "HTML & CSS": "code",
-  React: "react",
-  Bootstrap: "gridLayout",
-}; */
