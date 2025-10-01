@@ -1,9 +1,10 @@
 /*------ HERO SECTION Projects------- */
 @use '../../shared/_mixins' as *
 @use '../../shared/_breakpoints' as *
+@use '../../shared/variables' as *
     
 #hero
-    height: 100svh
+    height: $heroHeightMobile
     width: 100%
     opacity: 1
     transform: scale(1)
@@ -11,19 +12,14 @@
     overflow: clip
     .hero-bg  
         position: absolute
-        height: 100svh
+        inset: 0
+        height: $heroHeightMobile
         width: 100%
         object-fit: cover
         @include xl
-            height: 100vh
+            height: $heroHeight
     @include xl
-        height: 100vh
-
-    #bigTitle
-        text-transform: uppercase
-        max-width: clamp(50%, 88%, 100%)
-        text-shadow: 0px 1px 24px black
-        color: white
+        height: $heroHeight
 
     .hero-wrapper
         height: 100%
