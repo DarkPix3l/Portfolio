@@ -40,6 +40,16 @@ function loadProjectContent() {
 
   document.getElementById("description").textContent = project.description;
   document.getElementById("summary").textContent = project.summary;
+
+  //--------------------------
+  const liveDemo = document.getElementById("liveDemoLink");
+  project.liveDemoLink ? liveDemo.setAttribute("href", project.liveDemoLink) : liveDemo.remove();
+
+  const sourceCode = document.getElementById("sourceCode");
+  project.codeLink ? sourceCode.setAttribute("href", project.codeLink) : sourceCode.remove();
+
+  //--------------------------
+
   const skills = project.skills;
   const skillListItems = document.querySelectorAll("#skills-list ul li");
   skillListItems.forEach((li, index) => {

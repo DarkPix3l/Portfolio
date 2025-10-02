@@ -142,6 +142,8 @@ const projects = [
       "BACKEND & AUTH: Express (ESM, modular routes/controllers), Auth.js, OAUTH, CORS, Bcrypt, Helmet, Mongoose, Joi",
       "DATABASE: MongoDB",
     ],
+    liveDemoLink: "",
+    codeLink: "https://github.com/DarkPix3l/Elev-Her",
   },
   {
     pageId: "project2",
@@ -201,14 +203,14 @@ const projects = [
       "CONTENT & DATA: Node.js Fs, Static Pages Generation, Markdown Parsing",
       "STORAGE: Local file system",
     ],
+    liveDemoLink: "https://grow-blog.netlify.app/",
+    codeLink: "https://github.com/DarkPix3l/Grow-Blog",
   },
   {
     pageId: "project3",
     title: "Coders App",
-    summary:
-      `CodersApp is a coding challenge platform prototype designed to help developers practice and improve their skills. Built as a frontend-focused web application, it provides authentication, challenge browsing, and an integrated coding workspace with Markdown-based descriptions.`,
-    description:
-      `The project delivers a responsive, modern frontend built with React, Redux Toolkit, and React Router, styled using Tailwind CSS. It features protected routes for authenticated users, a customizable dark/light mode, and a challenge library loaded dynamically from JSON. Each challenge supports Markdown rendering for rich descriptions, while the integrated CodeMirror workspace allows users to write and test code directly in the browser. Designed with scalability in mind, CodersApp emphasizes clean UI, intuitive navigation, and maintainable state management, with a manager dashboard planned for future expansion. The platform demonstrates practical application of modern frontend patterns, state handling, and developer-centric features.`,
+    summary: `CodersApp is a coding challenge platform prototype designed to help developers practice and improve their skills. Built as a frontend-focused web application, it provides authentication, challenge browsing, and an integrated coding workspace with Markdown-based descriptions.`,
+    description: `The project delivers a responsive, modern frontend built with React, Redux Toolkit, and React Router, styled using Tailwind CSS. It features protected routes for authenticated users, a customizable dark/light mode, and a challenge library loaded dynamically from JSON. Each challenge supports Markdown rendering for rich descriptions, while the integrated CodeMirror workspace allows users to write and test code directly in the browser. Designed with scalability in mind, CodersApp emphasizes clean UI, intuitive navigation, and maintainable state management, with a manager dashboard planned for future expansion. The platform demonstrates practical application of modern frontend patterns, state handling, and developer-centric features.`,
     mainImage: {
       src: "../assets/img/projects/project3/1_mainimage/1_codersapp_mainimage_320.webp",
       srcset: `
@@ -278,6 +280,8 @@ const projects = [
       },
     ],
     skills: ["React", "Rexux + Async Thunks", "Tailwind"],
+    liveDemoLink: "https://coders-app.netlify.app/",
+    codeLink: "https://github.com/DarkPix3l/CodersApp",
   },
 
   {
@@ -347,5 +351,7 @@ const projects = [
       "INTERACTIVITY: Mobile menu animation, CSS hover states",
       "ACCESSIBILITY & PERFORMANCE: Semantic HTML, Keyboard navigation awareness, Lazy loading, Font preloading",
     ],
+    liveDemoLink: "https://fm-easybank-landing-page-react.netlify.app/",
+    codeLink: "https://github.com/DarkPix3l/easybank-landing-page",
   },
 ];
