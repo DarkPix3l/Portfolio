@@ -1,3 +1,5 @@
+@use './_variables' as *
+
 #bigTitle
     font-size:  clamp(3rem, 6vw, 5rem)
     letter-spacing: 2px
@@ -21,3 +23,26 @@ p
     font-style: normal
     line-height: 1.6
     font-size: 1rem
+
+label, .outlined-btn
+    font-size: 16px
+    line-height: 22px
+    font-weight: 400
+    letter-spacing: 0.4px
+
+.text-field 
+    font-family: "Share Tech", sans-serif
+    font-weight: 400
+    font-style: normal
+    font-size: 1rem
+
+.outlined-btn
+    text-decoration: none
+    text-transform: uppercase
+
+.validation-error-label
+    font-family: "Share Tech", sans-serif
+    font-size: 1rem
+    color: $error!important
+    letter-spacing: 0.4px
+    font-weight: 300
