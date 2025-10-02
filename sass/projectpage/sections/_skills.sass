@@ -8,29 +8,28 @@
     top: $heroHeightMobile
     z-index: 2
     background-color: inherit
-    line-height: 1.7
     @include xl()
         top: $heroHeight
-
-.skills-wrapper
-    @include wrapper-style(column, flex-start)
 
 #skills-text
     display: flex
     flex-direction: column
     justify-content: space-between
-    align-items: flex-start
     margin-bottom: 68px
     text-wrap: nowrap
+    flex-wrap: wrap
     @include xl
-        gap: 46px
         flex-direction: row
-        gap: 120px
+        column-gap: 7rem
 
     p
         text-wrap: balance
         max-width: 700px
-        font-size: 16px
+        font-size: 1rem
+    #usefulLinks
+        margin-top: 8px
+    #liveDemoLink
+        margin-right: 1rem
 
 #skills-list
     width: 100%
