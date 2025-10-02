@@ -3,7 +3,7 @@ const closeIcon = document.querySelector(".closeIcon");
 const openModal = document.querySelector(".frame");
 const grid = document.querySelector(".grid");
 
-modal.style.transition = "all 0.3s ease-in";
+modal.style.transition = "all 0.5s ease";
 
 function openModalFunc() {
   modal.classList.add("opening");
