@@ -15,7 +15,6 @@
     opacity: 0
     height: 100dvh
     backdrop-filter: blur(10px)
-
     @include lg()
         height: 100vh
     
@@ -30,7 +29,8 @@
         justify-self: center
         align-self: center
         gap: 10px
-        transition: transform 0.5s ease
+        transition: transform, 1s ease
+        transform: scale(0.8)
         overflow: auto
         @include lg()
             grid-template-columns: repeat(2, 1fr)
@@ -80,7 +80,7 @@
 .opening
     visibility: visible
     opacity: 1
-    /* transform: scale(1) */
+    transform: scale(1)
 
 .closeIcon
     position: absolute
