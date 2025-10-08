@@ -1,5 +1,12 @@
 const goToProject = () => {
   document.querySelectorAll(".project, .img-container").forEach((item) => {
+    item.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === "") {
+        e.preventDefault();
+        item.click();
+      }
+    });
+
     item.addEventListener("click", () => {
       const projectId = item.dataset.projectId;
       window.location.href = `project_page.html?id=${projectId}`;

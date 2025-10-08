@@ -27,24 +27,24 @@
 </head>
 
 <body data-theme="dark">
-
-    <!-- ______Menu Content______ -->
-    <div id="nav-link">
-        <a class="logo" href="/" aria-label="home logo button"><img src="./assets/icons/logo.svg" alt="logo"></a>
-        <ul>
-            <li class="menulinks"><a href="#skills">Skills</a></li>
-            <li class="menulinks"><a href="#projects">Projects</a></li>
-            <li class="menulinks"><a href="#contact">Contact</a></li>
-        </ul>
-    </div>
-
     <!-- ______Navigation______ -->
     <nav id="navigation">
-        <div id="burgerM" class="special">
+        <div id="burgerM" class="special" tabindex="0">
             <span></span>
             <span></span>
             <span></span>
         </div>
+
+        <!-- ______Menu Content______ -->
+        <div id="nav-link" aria-label="Open menu" aria-expanded="false">
+            <a class="logo" href="/" aria-label="home logo button"><img src="./assets/icons/logo.svg" alt="logo"></a>
+            <ul>
+                <li class="menulinks"><a href="#skills">Skills</a></li>
+                <li class="menulinks"><a href="#projects">Projects</a></li>
+                <li class="menulinks"><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+
         <!--         <div id="arrows">
             <a href=""><img id="arrow-up" src="./assets/icons/arrow-square-up.svg" alt="previous section"></a>
             <a href=""><img id="arrow-down" src="./assets/icons/arrow-square-down.svg" alt="next section"></a>
@@ -58,7 +58,7 @@
         <div class="dark-light-mode">
             <div class="neoBar">
                 <img src="./assets/icons/moon.svg" class="special" alt="moon icon" width="20">
-                <div class="switch">
+                <div class="switch" tabindex="0">
                     <div class="button"></div>
                 </div>
                 <img src="./assets/icons/sun.svg" class="special" alt="sun icon" width="23">
@@ -101,8 +101,6 @@
                 <img class="special" src="./assets/icons/social/git.svg" alt="link to github profile"></a>
             <a href="https://www.linkedin.com/in/gretamacri/" target="_blank">
                 <img class="special" src="./assets/icons/social/linkedin.svg" alt="link to linkedIn profile"></a>
-            <a href="https://www.behance.net/gretamacri" target="_blank">
-                <img class="special" src="./assets/icons/social/dribble.svg" alt="link to dribble profile"></a>
         </div>
     </section>
 
@@ -240,7 +238,7 @@
 
             <div id="container">
 
-                <div class="project" data-project-id="project1">
+                <div class="project" data-project-id="project1" tabindex="0">
                     <img src="./assets/img/projects/project1/0_mainImage_prev/0_elevher_preview_ver.576.webp" srcset="
                     ./assets/img/projects/project1/0_mainImage_prev/0_elevher_preview_ver.576.webp 384w,
                     ./assets/img/projects/project1/0_mainImage_prev/0_elevher_preview_ver.768.webp 512w,
@@ -263,7 +261,7 @@
                     </div>
                 </div>
 
-                <div class="project" data-project-id="project2">
+                <div class="project" data-project-id="project2" tabindex="0">
                     <img class="project-image"
                         src="./assets/img/projects/project2/mainImage/0_growBlog_preview_576.webp" srcset="
                     ./assets/img/projects/project2/mainImage/0_growBlog_preview_576.webp 384w,
@@ -287,7 +285,7 @@
                     </div>
                 </div>
 
-                <div class="project" data-project-id="project3">
+                <div class="project" data-project-id="project3" tabindex="0">
                     <img class="project-image" src="./assets/img/projects/project3/0_mainimage/0_codersapp_576h.webp"
                         srcset="
                     ./assets/img/projects/project3/0_mainimage/0_codersapp_576h.webp 384w,
@@ -311,7 +309,7 @@
                     </div>
                 </div>
 
-                <div class="project" data-project-id="project4">
+                <div class="project" data-project-id="project4" tabindex="0">
                     <img class="project-image"
                         src="./assets/img/projects/project4/0_mainImage_prev/0_easybank_mainimage_576h.webp" srcset="
                     ./assets/img/projects/project4/0_mainImage_prev/0_easybank_mainimage_576h.webp 384w,
