@@ -1,5 +1,5 @@
 const goToProject = () => {
-  document.querySelectorAll(".project, .img-container").forEach((item) => {
+  document.querySelectorAll(".img-container").forEach((item) => {
     item.addEventListener("keydown", (e) => {
       if (e.key === "Enter" || e.key === "") {
         e.preventDefault();
@@ -22,9 +22,18 @@ function getProjectIdFromUrl() {
 
 function loadProjectContent() {
   const id = getProjectIdFromUrl();
-  if (!id) return;
+  if (!id) {
+    console.error("No project ID found in URL. Redirecting to index.");
+    window.location.replace("index.html");
+    return;
+  }
   const project = projects.find((p) => p.pageId === id);
-  if (!project) return;
+  
+  if (!project) {
+    console.error(`Project with ID ${id} not found.`);
+    window.location.replace("index.html");
+    return;
+  }
 
   document.querySelectorAll(".titleB").forEach((el) => {
     el.textContent = project.title;
@@ -98,5 +107,6 @@ function loadProjectContent() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  getProjectIdFromUrl();
   loadProjectContent();
 });
