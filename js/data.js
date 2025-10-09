@@ -155,47 +155,46 @@ const projects = [
       Written in TypeScript for type safety, the project incorporates Sass/neomorphic CSS styles to deliver a visually appealing and responsive user interface. Every time a new Markdown file is added to the _posts directory, Grow-Blog automatically builds a new blog post page using the same layout but tailored content. The code structure emphasizes simplicity and maintainability, with clean file-based routing and styling that balances aesthetic polish with performance.
       `,
     mainImage: {
-      src: "../assets/img/projects/project2/mainImage/0_elevher_preview_ver.576.webp",
+      src: "../assets/img/projects/project2/1_mainimage/1_growBlog_mainimage_320.webp",
       srcset: `
-        ../assets/img/projects/project2/mainImage/0_growBlog_preview_576.webp 320w,
-        ../assets/img/projects/project2/mainImage/0_growBlog_preview_576.webp 375w, 
-        ../assets/img/projects/project2/mainImage/0_growBlog_preview_768.webp 768w,
-        ../assets/img/projects/project2/mainImage/0_growBlog_preview_2250.webp 1024w,
-        ../assets/img/projects/project2/mainImage/0_growBlog_preview_2250.webp 1440w,
-        ../assets/img/projects/project2/mainImage/0_growBlog_preview_3240.webp 1920w,
-        ../assets/img/projects/project2/mainImage/0_growBlog_preview_3240.webp 2560w
+        ../assets/img/projects/project2/1_mainimage/1_growBlog_mainimage_320.webp 320w,
+        ../assets/img/projects/project2/1_mainimage/1_growBlog_mainimage_375.webp 375w, 
+        ../assets/img/projects/project2/1_mainimage/1_growBlog_mainimage_768.webp 768w,
+        ../assets/img/projects/project2/1_mainimage/1_growBlog_mainimage_1024.webp 1024w,
+        ../assets/img/projects/project2/1_mainimage/1_growBlog_mainimage_1440.webp 1440w,
+        ../assets/img/projects/project2/1_mainimage/1_growBlog_mainimage_1920.webp 1920w,
+        ../assets/img/projects/project2/1_mainimage/1_growBlog_mainimage_2560.webp 2560w,
+        ../assets/img/projects/project2/1_mainimage/1_growBlog_mainimage_3840.webp 3840w
         `,
       sizes: sizes,
     },
 
     images: [
       {
-        src: "../assets/img/placeholders/imgPlaceholder_hor_320.png",
-        srcset:
-          "../assets/img/placeholders/imgPlaceholder_hor_320.png 320w, ../assets/img/placeholders/imgPlaceholder_hor_375.png 375w, ../assets/img/placeholders/imgPlaceholder_hor_425.png 425w, ../assets/img/placeholders/imgPlaceholder_hor_768.png 768w, ../assets/img/placeholders/imgPlaceholder_hor_1024.png 1024w, ../assets/img/placeholders/imgPlaceholder_hor_1280.png 1280w, ../assets/img/placeholders/imgPlaceholder_hor_1440.png 1440w",
+        src: `../assets/img/projects/project2/2_homepage/2_growblog_homepage_320.webp`,
+        srcset: `
+        ../assets/img/projects/project2/2_homepage/2_growblog_homepage_320.webp 320w,
+        ../assets/img/projects/project2/2_homepage/2_growblog_homepage_375.webp 375w,
+        ../assets/img/projects/project2/2_homepage/2_growblog_homepage_768.webp 768w,
+        ../assets/img/projects/project2/2_homepage/2_growblog_homepage_1024.webp 1024w,
+        ../assets/img/projects/project2/2_homepage/2_growblog_homepage_1440.webp 1440w,
+        ../assets/img/projects/project2/2_homepage/2_growblog_homepage_1920.webp 1920w
+        `,
         sizes: sizes,
-        caption: "User flow for the onboarding",
+        caption: "Homepage Preview",
       },
       {
-        src: "../assets/img/placeholders/imgPlaceholder_hor_320.png",
-        srcset:
-          "../assets/img/placeholders/imgPlaceholder_hor_320.png 320w, ../assets/img/placeholders/imgPlaceholder_hor_375.png 375w, ../assets/img/placeholders/imgPlaceholder_hor_425.png 425w, ../assets/img/placeholders/imgPlaceholder_hor_768.png 768w, ../assets/img/placeholders/imgPlaceholder_hor_1024.png 1024w, ../assets/img/placeholders/imgPlaceholder_hor_1280.png 1280w, ../assets/img/placeholders/imgPlaceholder_hor_1440.png 1440w",
+        src: "../assets/img/projects/project2/3_article_page/3_growblog_article_page_320.webp",
+        srcset: `
+        ../assets/img/projects/project2/3_article_page/3_growblog_article_page_320.webp 320w,
+        ../assets/img/projects/project2/3_article_page/3_growblog_article_page_375.webp 375w,
+        ../assets/img/projects/project2/3_article_page/3_growblog_article_page_768.webp 768w,
+        ../assets/img/projects/project2/3_article_page/3_growblog_article_page_1024.webp 1024w,
+        ../assets/img/projects/project2/3_article_page/3_growblog_article_page_1440.webp 1440w,
+        ../assets/img/projects/project2/3_article_page/3_growblog_article_page_1920.webp 1920w
+        `,
         sizes: sizes,
-        caption: "Mobile responsive design",
-      },
-      {
-        src: "../assets/img/placeholders/imgPlaceholder_hor_320.png",
-        srcset:
-          "../assets/img/placeholders/imgPlaceholder_hor_320.png 320w, ../assets/img/placeholders/imgPlaceholder_hor_375.png 375w, ../assets/img/placeholders/imgPlaceholder_hor_425.png 425w, ../assets/img/placeholders/imgPlaceholder_hor_768.png 768w, ../assets/img/placeholders/imgPlaceholder_hor_1024.png 1024w, ../assets/img/placeholders/imgPlaceholder_hor_1280.png 1280w, ../assets/img/placeholders/imgPlaceholder_hor_1440.png 1440w",
-        sizes: sizes,
-        caption: "Admin dashboard interface",
-      },
-      {
-        src: "../assets/img/placeholders/imgPlaceholder_hor_320.png",
-        srcset:
-          "../assets/img/placeholders/imgPlaceholder_hor_320.png 320w, ../assets/img/placeholders/imgPlaceholder_hor_375.png 375w, ../assets/img/placeholders/imgPlaceholder_hor_425.png 425w, ../assets/img/placeholders/imgPlaceholder_hor_768.png 768w, ../assets/img/placeholders/imgPlaceholder_hor_1024.png 1024w, ../assets/img/placeholders/imgPlaceholder_hor_1280.png 1280w, ../assets/img/placeholders/imgPlaceholder_hor_1440.png 1440w",
-        sizes: sizes,
-        caption: "Admin dashboard interface",
+        caption: `Article Page Preview`,
       },
     ],
     skills: [
