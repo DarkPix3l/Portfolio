@@ -77,7 +77,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const formData = new FormData(form);
     const recaptcha = document.querySelector("[name='g-recaptcha-response']");
-    if (recaptcha) formData.append("g-recaptcha-response", recaptcha.value);
+    if (!recaptcha || !recaptcha.value) {
+      Swal.fire({
+        title: "Please verify you're human",
+        text: "Complete the CAPTCHA before submitting.",
+        icon: "warning",
+      });
+      submitButton.disabled = false;
+      submitButton.value = "Submit";
+      return;
+    } else {
+      formData.append("g-recaptcha-response", recaptcha.value);
+    }
+
     const honeypot = document.querySelector("[name='bot-field']");
     if (honeypot.value) return;
 
