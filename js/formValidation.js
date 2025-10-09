@@ -79,7 +79,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const recaptcha = document.querySelector("[name='g-recaptcha-response']");
     if (recaptcha) formData.append("g-recaptcha-response", recaptcha.value);
     const honeypot = document.querySelector("[name='bot-field']");
-    if (honeypot.value) formData.append("bot-field", honeypot.value);
+    if (honeypot.value) return;
+
+    //Avoiding too many requests per time
+    const submitButton = form.querySelector("input[type='submit']");
+    const SUBMISSION_COOLDOWN = 15000; // 15 seconds
+    submitButton.disabled = true;
+    submitButton.value = "wait for next submission";
 
     try {
       const response = await fetch("/", {
@@ -118,5 +124,9 @@ document.addEventListener("DOMContentLoaded", () => {
         confirmButtonText: "close",
       });
     }
+    setTimeout(() => {
+      submitButton.disabled = false;
+      submitButton.value = "Submit";
+    }, SUBMISSION_COOLDOWN);
   });
 });
