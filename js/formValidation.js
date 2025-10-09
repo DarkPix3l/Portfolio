@@ -70,23 +70,53 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   ]);
 
-  // --- Handle Form Submission TODO ---
+  // --- Handle Form Submission ---
 
-  validator.onSuccess((event) => {
-    Swal.fire({
-      title: "Thank you for reaching out!",
-      text: "Your message has been sent!",
-      icon: "success",
-      background: "#19191a",
-      color: "#FFFF",
-      confirmButtonColor: "#716add",
-      confirmButtonText: "close",
-    });
+  validator.onSuccess(async (event) => {
+    event.preventDefault();
 
-    form.reset(); //textfields
+    const formData = new FormData(form);
+    const recaptcha = document.querySelector("[name='g-recaptcha-response']");
+    if (recaptcha) formData.append("g-recaptcha-response", recaptcha.value);
+    const honeypot = document.querySelector("[name='bot-field']");
+    if (honeypot.value) formData.append("bot-field", honeypot.value);
 
-    document.querySelectorAll(".is-valid").forEach((element) => {
-      element.classList.remove("is-valid");
-    }); //remove class
+    try {
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData).toString(),
+      });
+
+      if (response.ok) {
+        Swal.fire({
+          title: "Thank you for reaching out!",
+          text: "Your message has been sent!",
+          icon: "success",
+          background: "#19191a",
+          color: "#FFFF",
+          confirmButtonColor: "#716add",
+          confirmButtonText: "close",
+        });
+
+        form.reset(); //textfields
+
+        document.querySelectorAll(".is-valid").forEach((el) => {
+          el.classList.remove("is-valid");
+        }); //remove class
+      } else {
+        throw new Error("Network response was not ok");
+      }
+    } catch (error) {
+      Swal.fire({
+        title: "Oops!",
+        text: "Something went wrong. Please try again later.",
+        icon: "error",
+        background: "#19191a",
+        color: "#FFFF",
+        confirmButtonColor: "#716add",
+        confirmButtonText: "close",
+      });
+    }
   });
 });

@@ -25,7 +25,7 @@
     <meta name="og:image" content="./assets/icons/logo.svg">
     <meta name="og:description"
         content="Passionate Front-End Developer ready to build modern, accessible, and high-performance user interfaces. See my work.">
-     <script type="application/ld+json">
+    <script type="application/ld+json">
         {
         "@context": "https://schema.org",
         "@type": "Person",
@@ -362,12 +362,19 @@
 
 
                 <div class="half-div">
-                    <form id="email-form" name="email-form" data-name="Email Form" action="#" method="post"
-                        autocomplete="off">
+                    <form id="email-form" name="email-form" data-name="Email Form" method="post" data-netlify="true"
+                        data-netlify-recaptcha="true">
+                        <input type="hidden" name="form-name" value="contact">
+
+                        <p style="display:none;">
+                            <label>
+                                Don’t fill this out if you’re human: <input name="bot-field" type="text" />
+                            </label>
+                        </p>
                         <div class="control-wrapper">
                             <label for="name">Name</label>
                             <input type="text" class="text-field" required minlength="2" maxlength="15" name="name"
-                                placeholder="Enter your name" id="name">
+                                placeholder="Enter your name" id="name" autocomplete="name">
                         </div>
 
                         <div class="control-wrapper">
@@ -379,7 +386,7 @@
                         <div class="control-wrapper">
                             <label for="email">Email Address</label>
                             <input type="email" class="text-field" required maxlength="256" name="email"
-                                placeholder="Enter your email" id="email">
+                                placeholder="Enter your email" id="email" autocomplete="email">
                         </div>
 
                         <div class="control-wrapper">
@@ -388,6 +395,7 @@
                                 placeholder="How can I help you today?" id="message" spellcheck="true"
                                 required></textarea>
                         </div>
+                        <div data-netlify-recaptcha="true"></div>
                         <input type="submit" value="Submit" class="outlined-btn">
                     </form>
                 </div>
