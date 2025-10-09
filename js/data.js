@@ -279,7 +279,7 @@ const projects = [
         caption: "Challenges page - Darkmode preview",
       },
     ],
-    skills: ["React", "Rexux + Async Thunks", "Tailwind"],
+    skills: ["React", "Redux + Async Thunk", "Tailwind"],
     liveDemoLink: "https://coders-app.netlify.app/",
     codeLink: "https://github.com/DarkPix3l/CodersApp",
   },

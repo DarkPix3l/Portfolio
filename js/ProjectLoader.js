@@ -35,6 +35,8 @@ function loadProjectContent() {
     return;
   }
 
+   updateDynamicSEO(project);
+
   document.querySelectorAll(".titleB").forEach((el) => {
     el.textContent = project.title;
   });
