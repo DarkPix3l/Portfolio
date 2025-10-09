@@ -3,18 +3,16 @@ const closeIcon = document.querySelector(".closeIcon");
 const openModal = document.querySelector(".frame");
 const grid = document.querySelector(".grid");
 
-modal.style.transition = "all 0.5s ease";
-
 function openModalFunc() {
-  modal.classList.add("opening");
+  modal.classList.add("bg-ani");
+  grid.classList.add("grid-ani");
   body.style.overflowY = "hidden";
-  grid.style.transform = "translateY(0px)";
 }
 
 function closeModalFunc() {
-  modal.classList.remove("opening");
+  modal.classList.remove("bg-ani");
+  grid.classList.remove("grid-ani");
   body.style.overflowY = "auto";
-  grid.style.transform = "translateY(-109px)";
 }
 
 // Attach listeners

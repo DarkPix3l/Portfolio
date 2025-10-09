@@ -15,6 +15,7 @@
     opacity: 0
     height: 100dvh
     backdrop-filter: blur(10px)
+    transition: transform 0.5s ease, opacity 0.5s ease, visibility 0.5s ease
     @include lg()
         height: 100vh
     
@@ -29,8 +30,9 @@
         justify-self: center
         align-self: center
         gap: 10px
-        transition: transform, 1s ease
-        transform: scale(0.8)
+        transform: translateY(-109px)
+        opacity: 0
+        transition: transform 0.75s ease-out, opacity 0.5s ease
         overflow: auto
         @include lg()
             grid-template-columns: repeat(2, 1fr)
@@ -77,10 +79,12 @@
                     background-color: rgba(0, 0, 0, 0.6)
 
 //Event    
-.opening
+.bg-ani
     visibility: visible
     opacity: 1
-    transform: scale(1)
+.grid-ani
+    transform: translateY(0px)!important
+    opacity: 1!important
 
 .closeIcon
     position: absolute
