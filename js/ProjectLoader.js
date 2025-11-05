@@ -52,7 +52,6 @@ function loadProjectContent() {
     img.setAttribute("srcset", mainImage.srcset);
     img.setAttribute("sizes", mainImage.sizes);
     img.setAttribute("alt", `${project.title} showcase image`);
-    img.setAttribute("loading", "lazy");
     hero.appendChild(img);
   }
 
