@@ -5,25 +5,26 @@
 /*------ FOOTER ------- */
 footer
     width: 100%
-    padding: 0.9rem $px
+    padding: 3rem $px
     box-shadow: 0rem 1rem 5rem $light-bg
+    @include lg
+        padding: 1.2rem 10vw
     div
         max-width: 1920px
+        gap: 2.5rem
         @include wrapper-style(column, center, center)
         @include lg
             @include wrapper-style(row, center, space-between)
-        img
-            padding-bottom: 20px
-            @include lg
-                padding-bottom: 0
         ul
             display: flex
             flex-direction: column
             align-items: center
+            gap: 1.5rem
             @include lg
                 flex-direction: row
-            a
-                padding: 25px
-
             li:nth-child(3) > a:nth-child(1)
                 padding-right: 0
+            a
+                padding: 0
+                @include lg
+                    padding: 25px
