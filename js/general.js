@@ -1,12 +1,21 @@
 const transitionStyle = "all 0.4s ease-out";
+const THEME_STORAGE_KEY = "user-theme";
+const DEFAULT_THEME = "dark";
 
+const applyThemeOnLoad = (body) => {
+  // Load the stored theme or use the default
+  const storedTheme = localStorage.getItem(THEME_STORAGE_KEY) || DEFAULT_THEME;
+
+  // Set the theme attribute directly.
+  body.setAttribute("data-theme", storedTheme);
+};
 /* Switch animation */
 const initSwitch = () => {
   const switchA = document.querySelector(".switch");
-  const button = document.querySelector(".button");
-  let invertMe = document.querySelectorAll(".special");
-  let isMoved = false;
   const body = document.body;
+
+  // Apply the stored theme immediately on load.
+  applyThemeOnLoad(body);
 
   switchA.addEventListener("keydown", (e) => {
     if (e.key === "Enter" || e.key === " ") {
@@ -16,15 +25,17 @@ const initSwitch = () => {
   });
 
   switchA.addEventListener("click", () => {
-    button.style.transition = transitionStyle;
-    button.style.transform = isMoved ? "translateX(0)" : "translateX(100%)";
+    //saving the current theme from the body attribute
+    const currentTheme = body.getAttribute("data-theme");
 
-    invertMe.forEach((el) => {
-      el.style.filter = isMoved ? "invert(0)" : "invert(1)";
-    });
+    //Calculate the new theme
+    const newTheme = currentTheme === "dark" ? "light" : "dark";
 
-    body.setAttribute("data-theme", isMoved ? "dark" : "light");
-    isMoved = !isMoved;
+    //Apply new theme to the body
+    body.setAttribute("data-theme", newTheme);
+
+    //Save the new state
+    localStorage.setItem(THEME_STORAGE_KEY, newTheme);
   });
 };
 
