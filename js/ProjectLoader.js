@@ -68,7 +68,7 @@ function loadProjectContent() {
   //--------------------------
 
   const skills = project.skills;
-  const skillListItems = document.querySelectorAll("#skills-list ul li");
+  const skillListItems = document.querySelectorAll("#skills-list-p ul li");
   skillListItems.forEach((li, index) => {
     if (skills[index]) {
       const iconSpan = li.querySelector("span.P-icon");

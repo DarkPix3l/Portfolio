@@ -10,7 +10,12 @@ $themes: (
     description-bg: rgba(255,255,255,0.5),
     footer-shadow: 0rem 1rem 5rem $dark-text,
     form-focus: #101010d7,
-    closeIcon-bg: aliceblue
+    closeIcon-bg: aliceblue,
+    skills-list-bg: #E7E7E7,
+    skills-list-borderC: $dark-bg,
+    skills-list-side-gradient: 'linear-gradient(to right, rgba(213, 132, 100, 0) 90%, #e7e7e7 100%),linear-gradient(to left, rgba(213, 132, 100, 0) 90%, #e7e7e7 100%)',
+    skills-list-icons-col: $dark-bg,
+    special: invert(1)
   ),
   dark: (
     bg: $dark-bg,
@@ -20,27 +25,52 @@ $themes: (
     description-bg: rgba(0,0,0,0.5),
     footer-shadow: 0rem 1rem 5rem $light-bg,
     form-focus: #efefefda,
-    closeIcon-bg: transparent
+    closeIcon-bg: transparent,
+    skills-list-bg: #181818,
+    skills-list-borderC: $light-bg,
+    skills-list-side-gradient: 'linear-gradient(to right, rgba(42, 123, 155, 0) 90%, #181818 100%),linear-gradient(to left, rgba(42, 123, 155, 0) 90%, #181818 100%)',
+    skills-list-icons-col: $light-bg,
+    special: invert(0)
   )
 )
-
+ 
 @each $name, $colors in $themes
   body[data-theme="#{$name}"]
     background-color: map.get($colors, bg)
     color: map.get($colors, text)
+    a
+      color: map.get($colors, text)
     #nav-link
       background-color: map.get($colors, navlink-background)
-      a
-        color: map.get($colors, text)
     .logo
         filter: drop-shadow(map.get($colors, logo-shadow))
-
+    #burgerM 
+      span
+        background-color: map.get($colors, text)
+    #social
+      img
+        fill: map.get($colors, text )
+    #hero-line
+      background-color: map.get($colors, text)
+    #skills-list
+      background-color: map.get($colors, skills-list-bg)
+      box-shadow: inset 0px 0px 5px map.get($colors, skills-list-borderC)
+      &::after
+        background: unquote(map.get($colors, skills-list-side-gradient))
+        .iconGroup
+          .icon
+            fill: map.get($colors, skills-list-icons-col)
+    .description
+        h3, p
+            color: map.get($colors, text)
     .description::before
         background-color: map.get($colors, description-bg)
     .text-field
         color: map.get($colors, text)
         &:focus
             border-color: map.get($colors, form-focus)
+    .square-all 
+      background-color: map.get($colors, text)
     footer
         box-shadow: map.get($colors, footer-shadow)
         a
@@ -48,3 +78,6 @@ $themes: (
     .closeIcon
         border-radius: 13px
         background: map.get($colors, closeIcon-bg)
+    .special
+      filter: map.get($colors, special)
+      transition: filter 0.5s ease
